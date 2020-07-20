@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
+</head>
+
+<body class="page-body">
+
+  <header class="page-header">
+    <a class="page-header__logo">
+      <img src="https://via.placeholder.com/74x23" width="74" height="23" alt="Логотип сайта Pink">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <a href="index.html">Главная</a>
+        </li>
+        <li class="site-list__item site-list__item--active">
+          <a>Фотографии</a>
+        </li>
+        <li class="site-list__item">
+          <a href="form.html">Конкурс</a>
+        </li>
+        <li class="site-list__item">
+          <a href="#">HTML Academy</a>
+        </li>
+      </ul>
+    </nav>
+    <p class="page-header__slogan">Фотографии пользователей</p>
+  </header>
+
+  <main>
+    <section class="photo">
+      <h2 class="visually-hidden">Фотолента</h2>
+      <p class="photo__intro">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+      <ul class="photo__list">
+        <li class="photo__item photo-item">
+          <img class="photo-item__img" src="https://via.placeholder.com/320x137" width="320" height="137" alt="Подвесной мост над рекой">
+          <p class="photo-item__author">Анна</p>
+          <time class="photo-item__datetime" datetime="14:55">(5 минут назад)</time>
+          <p class="photo-item__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+          <span class="photo__like-btn"></span>
+          <p class="photo__like-info">Нравится: <span class="photo__like-count">215</span></p>
+        </li>
+        <li class="photo__item photo-item">
+          <img class="photo-item__img" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Белая машина">
+          <p class="photo-item__author">Левон</p>
+          <time class="photo-item__datetime" datetime="14:55">(5 часов назад)</time>
+          <p class="photo-item__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+          <span class="photo__like-btn"></span>
+          <p class="photo__like-info">Нравится: <span class="photo__like-count">356</span></p>
+        </li>
+        <li class="photo__item photo-item">
+          <img class="photo-item__img" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Барабанная установка">
+          <p class="photo-item__author">Антон</p>
+          <time class="photo-item__datetime" datetime="14:55">(12 часов назад)</time>
+          <p class="photo-item__text">Соседи будут рады!</p>
+          <span class="photo__like-btn"></span>
+          <p class="photo__like-info">Нравится: <span class="photo__like-count">666</span></p>
+        </li>
+        <li class="photo__item photo-item">
+          <img class="photo-item__img" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Стеклянный потолок высотного здания">
+          <p class="photo-item__author">Борис</p>
+          <time class="photo-item__datetime" datetime="14:55">(20 часов назад)</time>
+          <p class="photo-item__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+          <span class="photo__like-btn"></span>
+          <p class="photo__like-info">Нравится: <span class="photo__like-count">215</span></p>
+        </li>
+        <li class="photo__item photo-item">
+          <img class="photo-item__img" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Кубанская бахча">
+          <p class="photo-item__author">Сергей</p>
+          <time class="photo-item__datetime" datetime="14:55">(25 часов назад)</time>
+          <p class="photo-item__text">Самая кубанская в мире!</p>
+          <span class="photo__like-btn"></span>
+          <p class="photo__like-info">Нравится: <span class="photo__like-count">4</span></p>
+        </li>
+        <li class="photo__item photo-item">
+          <img class="photo-item__img" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Фотография природы с высоты">
+          <p class="photo-item__author">Максим</p>
+          <time class="photo-item__datetime" datetime="14:55">(40 часов назад)</time>
+          <p class="photo-item__text">Где снег-то?</p>
+          <span class="photo__like-btn"></span>
+          <p class="photo__like-info">Нравится: <span class="photo__like-count">150</span></p>
+        </li>
+        <li class="photo__item photo-item">
+          <img class="photo-item__img" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Крыло самолета">
+          <p class="photo-item__author">Надежда</p>
+          <time class="photo-item__datetime" datetime="14:55">(45 часов назад)</time>
+          <p class="photo-item__text">Всем GM и взаимные лайки!</p>
+          <span class="photo__like-btn"></span>
+          <p class="photo__like-info">Нравится: <span class="photo__like-count">2560</span></p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <a class="page-footer__logo">
+      <img src="https://via.placeholder.com/145x40" width="145" height="40" alt="Логотип сайта Pink">
+    </a>
+    <ul class="page-footer__social social">
+      <li class="social__item">
+        <a class="social__link social__link--twitter" href="#">Twitter</a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--facebook" href="#">Facebook</a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--youtube" href="#">Youtube</a>
+      </li>
+    </ul>
+    <p class="page-footer__copyright">
+      Разработано &ndash;
+      <a href="https://htmlacademy.ru/intensive/adaptive">htmlacademy.ru</a>
+    </p>
+  </footer>
+
+</body>
+</html>
