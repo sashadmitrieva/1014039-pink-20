@@ -35,13 +35,13 @@
     <button class="page-header__button" type="button">Скачать приложение</button>
     <ul class="page-header__list promo-list">
       <li class="promo-list__item promo-list__item--apple">
-        <img src="https://via.placeholder.com/47x56" width="47" height="56" alt="Логотип Apple">
+        <a href="#"><img src="https://via.placeholder.com/47x56" width="47" height="56" alt="Логотип Apple"></a>
       </li>
       <li class="promo-list__item promo-list__item--android">
-        <img src="https://via.placeholder.com/43x47" width="43" height="47" alt="Логотип Android">
+        <a href="#"><img src="https://via.placeholder.com/43x47" width="43" height="47" alt="Логотип Android"></a>
       </li>
       <li class="promo-list__item promo-list__item--microsoft">
-        <img src="https://via.placeholder.com/44x41" width="44" height="41" alt="Логотип Microsoft">
+        <a href="#"><img src="https://via.placeholder.com/44x41" width="44" height="41" alt="Логотип Microsoft"></a>
       </li>
     </ul>
     <p class="page-header__available">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
@@ -50,7 +50,7 @@
   <main class="page-main">
     <h1 class="visually-hidden">Pink - мобильное приложение для раскрашивания серых будней в розовый цвет</h1>
     <section class="advantages">
-      <h2 class="visually-hidden">Возможности приложения</h2>
+      <h2 class="visually-hidden">Характеристики приложения</h2>
       <p class="advantages__intro">Устали от серости мегаполиса?</p>
       <p class="advantages__info">Нам есть, что вам предложить!</p>
       <ul class="advantages__list">
@@ -67,6 +67,81 @@
           <p class="advantages__desc">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
         </li>
       </ul>
+    </section>
+
+    <section class="reviews">
+      <h2 class="reviews__title">Отзывы</h2>
+      <div class="reviews__list">
+        <blockquote class="reviews__item">
+          <cite class="reviews__author">Николай Петров</cite>
+          <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии»</p>
+        </blockquote>
+      </div>
+      <p class="reviews__toggles slider">
+        <button class="slider__toggle slider__toggle--current" type="button">1</button>
+        <button class="slider__toggle" type="button">2</button>
+        <button class="slider__toggle" type="button">3</button>
+      </p>
+    </section>
+
+    <section class="price">
+      <h2 class="visually-hidden">Цены</h2>
+      <ul class="price__list">
+        <li class="price__item">
+          <h3 class="price__title">База</h3>
+          <span class="price__cost">1,99 USD</span>
+          <ul class="price__tariff price-list">
+            <li class="price-list__item price-list__item--pink">Розовый фильтр</li>
+            <li class="price-list__item price-list__item--emoticons">Смайлики</li>
+            <li class="price-list__item price-list__item--comments">Комментарии</li>
+          </ul>
+        </li>
+        <li class="price__item">
+          <h3 class="price__title">Стандарт</h3>
+          <span class="price__cost">3,99 USD</span>
+          <ul class="price__tariff price-list">
+            <li class="price-list__item price-list__item--pink">Розовый фильтр</li>
+            <li class="price-list__item price-list__item--emoticons">Смайлики</li>
+            <li class="price-list__item price-list__item--comments">Комментарии</li>
+          </ul>
+        </li>
+        <li class="price__item">
+          <h3 class="price__title">Анлим</h3>
+          <span class="price__cost">9,99 USD</span>
+          <ul class="price__tariff price-list">
+            <li class="price-list__item price-list__item--pink">Розовый фильтр</li>
+            <li class="price-list__item price-list__item--emoticons">Смайлики</li>
+            <li class="price-list__item price-list__item--comments">Комментарии</li>
+          </ul>
+        </li>
+      </ul>
+      <p class="price__toggles slider slider--tablet">
+        <button class="slider__toggle" type="button">1</button>
+        <button class="slider__toggle slider__toggle--current" type="button">2</button>
+        <button class="slider__toggle" type="button">3</button>
+      </p>
+    </section>
+
+    <section class="feedback">
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <p class="feedback__info">
+        Остались вопросы? Свяжитесь с нами!
+      </p>
+      <ul class="feedback__list">
+        <li class="feedback__item">
+          <h3 class="feedback__title">Звоните:</h3>
+          <a class="feedback__text" href="tel:78125556666">+7(812)555-66-66</a>
+        </li>
+        <li class="feedback__item">
+          <h3 class="feedback__title">Пишите:</h3>
+          <a class="feedback__text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </li>
+        <li class="feedback__item">
+          <h3 class="feedback__title">Приезжайте в гости:</h3>
+          <p class="feedback__text">ул. Большая Конюшенная, 19/8</p>
+        </li>
+      </ul>
+      <a class="feedback__link-map" href="#"><img src="https://via.placeholder.com/320x200" alt="Карта местонахождения офиса по адресу Большая Конюшенная, 19/8" width="320" height="200"></a>
     </section>
   </main>
 

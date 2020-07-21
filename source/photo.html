@@ -40,7 +40,7 @@
       <p class="photo__intro">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
       <ul class="photo__list">
         <li class="photo__item photo-item">
-          <img class="photo-item__img" src="https://via.placeholder.com/320x137" width="320" height="137" alt="Подвесной мост над рекой">
+          <a class="photo-item__img" href="#"><img src="https://via.placeholder.com/320x137" width="320" height="137" alt="Подвесной мост над рекой"></a>
           <p class="photo-item__author">Анна</p>
           <time class="photo-item__datetime" datetime="14:55">(5 минут назад)</time>
           <p class="photo-item__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
@@ -48,7 +48,7 @@
           <p class="photo__like-info">Нравится: <span class="photo__like-count">215</span></p>
         </li>
         <li class="photo__item photo-item">
-          <img class="photo-item__img" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Белая машина">
+          <a class="photo-item__img" href="#"><img src="https://via.placeholder.com/280x180" width="280" height="180" alt="Белая машина"></a>
           <p class="photo-item__author">Левон</p>
           <time class="photo-item__datetime" datetime="14:55">(5 часов назад)</time>
           <p class="photo-item__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
@@ -56,7 +56,7 @@
           <p class="photo__like-info">Нравится: <span class="photo__like-count">356</span></p>
         </li>
         <li class="photo__item photo-item">
-          <img class="photo-item__img" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Барабанная установка">
+          <a class="photo-item__img" href="#"><img src="https://via.placeholder.com/280x180" width="280" height="180" alt="Барабанная установка"></a>
           <p class="photo-item__author">Антон</p>
           <time class="photo-item__datetime" datetime="14:55">(12 часов назад)</time>
           <p class="photo-item__text">Соседи будут рады!</p>
@@ -64,7 +64,7 @@
           <p class="photo__like-info">Нравится: <span class="photo__like-count">666</span></p>
         </li>
         <li class="photo__item photo-item">
-          <img class="photo-item__img" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Стеклянный потолок высотного здания">
+          <a class="photo-item__img" href="#"><img src="https://via.placeholder.com/280x180" width="280" height="180" alt="Стеклянный потолок высотного здания"></a>
           <p class="photo-item__author">Борис</p>
           <time class="photo-item__datetime" datetime="14:55">(20 часов назад)</time>
           <p class="photo-item__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
@@ -72,7 +72,7 @@
           <p class="photo__like-info">Нравится: <span class="photo__like-count">215</span></p>
         </li>
         <li class="photo__item photo-item">
-          <img class="photo-item__img" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Кубанская бахча">
+          <a class="photo-item__img" href="#"><img src="https://via.placeholder.com/280x180" width="280" height="180" alt="Кубанская бахча"></a>
           <p class="photo-item__author">Сергей</p>
           <time class="photo-item__datetime" datetime="14:55">(25 часов назад)</time>
           <p class="photo-item__text">Самая кубанская в мире!</p>
@@ -80,7 +80,7 @@
           <p class="photo__like-info">Нравится: <span class="photo__like-count">4</span></p>
         </li>
         <li class="photo__item photo-item">
-          <img class="photo-item__img" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Фотография природы с высоты">
+          <a class="photo-item__img" href="#"><img src="https://via.placeholder.com/280x180" width="280" height="180" alt="Фотография природы с высоты"></a>
           <p class="photo-item__author">Максим</p>
           <time class="photo-item__datetime" datetime="14:55">(40 часов назад)</time>
           <p class="photo-item__text">Где снег-то?</p>
@@ -88,7 +88,7 @@
           <p class="photo__like-info">Нравится: <span class="photo__like-count">150</span></p>
         </li>
         <li class="photo__item photo-item">
-          <img class="photo-item__img" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Крыло самолета">
+          <a class="photo-item__img" href="#"><img src="https://via.placeholder.com/280x180" width="280" height="180" alt="Крыло самолета"></a>
           <p class="photo-item__author">Надежда</p>
           <time class="photo-item__datetime" datetime="14:55">(45 часов назад)</time>
           <p class="photo-item__text">Всем GM и взаимные лайки!</p>
@@ -96,6 +96,36 @@
           <p class="photo__like-info">Нравится: <span class="photo__like-count">2560</span></p>
         </li>
       </ul>
+      <p class="photo__text">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+    </section>
+
+    <section class="post">
+      <h2 class="visually-hidden">Редактирование фотографии</h2>
+      <img class="post__img" src="https://via.placeholder.com/280x374" width="280" height="374" alt="Зимняя дорога">
+
+      <form class="post__form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset>
+          <ul class="post__list filter-list">
+            <li class="filter-list__item">
+              <label for="filter-cut">
+                <input class="filter-list__filter-cut" type="radio" name="filter" value="cut" id="filter-cut" checked></label>
+            </li>
+            <li class="filter-list__item">
+              <label for="filter-repaint">
+                <input class="filter-list__filter-repaint" type="radio" name="filter" value="repaint" id="filter-repaint"></label>
+            </li>
+            <li class="filter-list__item">
+              <label for="filter-contrast">
+                <input class="filter-list__filter-contrast" type="radio" name="filter" value="contrast" id="filter-contrast"></label>
+            </li>
+          </ul>
+        </fieldset>
+        <label for="filter-range">
+          <input class="post__range" type="range" id="filter-range" aria-label="Контроллер значений фильтра">
+        </label>
+        <button class="post__btn-submit" type="submit">Запостить</button>
+        <button class="post__btn-reset" type="reset">Отмена</button>
+      </form>
     </section>
   </main>
 
@@ -121,4 +151,5 @@
   </footer>
 
 </body>
+
 </html>
