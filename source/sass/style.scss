@@ -1,1 +1,38 @@
 // Начните писать стили здесь
+@import "variables";
+@import "mixin";
+@import "fonts";
+@import "page-header";
+@import "site-list";
+@import "promo-list";
+@import "advantages";
+@import "photo";
+@import "photo-item";
+@import "page-footer";
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $base-blue;
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
