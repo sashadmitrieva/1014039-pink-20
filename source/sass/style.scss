@@ -11,10 +11,16 @@
 @import "page-footer";
 
 body {
+  width: 320px;
   margin: 0;
   padding: 0;
   color: $base-blue;
   font-family: "Open Sans", "Arial", sans-serif;
+}
+
+.container {
+  width: 280px;
+  padding: 0 20px;
 }
 
 a {
