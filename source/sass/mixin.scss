@@ -1,0 +1,11 @@
+@mixin base-size($fz, $fw, $lh) {
+  font-size: ($fz);
+  font-weight: ($fw);
+  line-height: ($lh);
+}
+
+@mixin base-btn($bc, $br) {
+  font-weight: 700;
+  border: 3px solid ($bc);
+  border-radius: ($br);
+}

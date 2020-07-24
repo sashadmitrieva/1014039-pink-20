@@ -1,0 +1,13 @@
+.site-list {
+  @include base-size(18px, 700, 32px);
+  text-transform: uppercase;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    & a {
+      color: $base-white;
+    }
+  }
+}

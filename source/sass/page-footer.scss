@@ -1,0 +1,17 @@
+.page-footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__copyright {
+    margin: 0;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,16 @@
+.photo-item {
+  position: relative;
+
+  &__author {
+    @include base-size(14px, 700, 24px);
+  }
+
+  &__datetime {
+    @include base-size(12px, 300, 24px);
+    text-transform: uppercase;
+  }
+
+  &__text {
+    @include base-size(14px, 400, 24px);
+  }
+}
