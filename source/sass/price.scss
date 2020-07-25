@@ -1,0 +1,18 @@
+.price {
+  background-color: $base-grey;
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__title {
+    @include base-size(14px, 700, 30px);
+    text-transform: uppercase;
+  }
+
+  &__cost {
+    @include base-size(18px, 300, 30px);
+  }
+}
