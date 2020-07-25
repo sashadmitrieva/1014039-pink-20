@@ -1,0 +1,14 @@
+.post {
+  background-color: $base-grey;
+
+  &__btn-submit {
+    color: $base-pink;
+
+    @include base-btn($base-pink, 30px);
+  }
+
+  &__btn-reset {
+    @include base-btn($base-blue, 30px);
+    opacity: 0.1;
+  }
+}
