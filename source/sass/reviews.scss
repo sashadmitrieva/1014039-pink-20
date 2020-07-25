@@ -1,0 +1,14 @@
+.reviews {
+  &__item {
+    margin: 0;
+  }
+
+  &__author {
+    @include base-size(18px, 700, 30px);
+    font-style: normal;
+  }
+
+  &__text {
+    @include base-size(14px, 400, 30px);
+  }
+}
