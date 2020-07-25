@@ -8,11 +8,15 @@
 @import "advantages";
 @import "photo";
 @import "photo-item";
+@import "competition";
+@import "post";
+@import "price";
+@import "reviews";
+@import "feedback";
 @import "page-footer";
 
 body {
-  width: 320px;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   color: $base-blue;
   font-family: "Open Sans", "Arial", sans-serif;
@@ -20,6 +24,7 @@ body {
 
 .container {
   width: 280px;
+  margin: 0 auto;
   padding: 0 20px;
 }
 
