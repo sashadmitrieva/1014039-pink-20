@@ -1,0 +1,20 @@
+.feedback {
+  &__info {
+    @include base-size(24px, 300, 29px);
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__title {
+    @include base-size(18px, 700, 25px);
+  }
+
+  &__text {
+    @include base-size(24px, 300, 33px);
+    color: $base-pink;
+  }
+}

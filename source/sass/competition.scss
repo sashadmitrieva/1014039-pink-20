@@ -1,0 +1,73 @@
+.competition {
+  &__promo {
+    @include base-size(14px, 400, 30px);
+  }
+
+  &__name {
+    color: $base-pink;
+    text-transform: uppercase;
+
+    @include base-size(14px, 400, 30px);
+  }
+
+  &__field::placeholder {
+    @include base-size(18px, 400, 30px);
+    color: $base-blue;
+  }
+
+  &__checkboxarea,
+  &__radioarea {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__fieldset {
+    border: none;
+
+    &--bgc {
+      background-color: $base-grey;
+    }
+  }
+
+  &__radiolabel {
+    @include base-size(18px, 400, 30px);
+  }
+
+  &__intro {
+    @include base-size(14px, 400, 18px);
+    color: $base-pink;
+    text-transform: uppercase;
+  }
+
+  &__emotionarea {
+    @include base-size(18px, 400, 30px);
+    font-family: "Open Sans", "Arial", sans-serif;
+    color: $base-blue;
+  }
+
+  &__label {
+    @include base-size(18px, 400, 30px);
+    color: $base-blue;
+  }
+
+  &__btn {
+    background-color: $base-green;
+    border: none;
+    border-radius: 1px;
+    color: $base-white;
+    font-family: "Open Sans", "Arial", sans-serif;
+    text-transform: uppercase;
+
+    @include base-size(18px, 700, 30px);
+  }
+
+  &__legend {
+    @include base-size(14px, 400, 30px);
+    text-transform: uppercase;
+  }
+
+  &__star {
+    color: $base-pink;
+  }
+}

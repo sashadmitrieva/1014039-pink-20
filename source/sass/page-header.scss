@@ -1,9 +1,6 @@
 .page-header {
   color: $base-white;
-
-  &__top {
-    background-color: $base-blue;
-  }
+  background-color: $base-blue;
 
   &__middle {
     background-image: url("../img/bg-back-mobile@1x.jpg");
@@ -17,7 +14,7 @@
   }
 
   &__slogan {
-    @include base-size(24px, 300, 29px);
+    @include base-size(24px, 300, 33px);
     margin: 0;
 
     &--main {
