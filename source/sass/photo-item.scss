@@ -1,5 +1,9 @@
 .photo-item {
-  position: relative;
+  width: 300px;
+
+  &:nth-of-type(1) {
+    width: 100%;
+  }
 
   &__author {
     @include base-size(14px, 700, 24px);
