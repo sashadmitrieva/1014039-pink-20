@@ -39,12 +39,12 @@
   &__container {
     display: flex;
 
-    @media (max-width: $mobile-width) {
+    @media (min-width: $mobile-width) and (max-width: $tablet-width) {
       background-image: url("../img/bg-back-mobile@1x.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      height: 171px;
+      min-height: 171px;
     }
 
     @media (min-width: $tablet-width) and (max-width: $desktop-width) {
@@ -68,7 +68,7 @@
     margin: 0 auto;
 
     &--index {
-      @media (max-width: $mobile-width) {
+      @media (min-width: $mobile-width) and (max-width: $tablet-width) {
         height: 396px;
         background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
         background-repeat: no-repeat;
