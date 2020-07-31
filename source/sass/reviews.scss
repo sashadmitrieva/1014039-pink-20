@@ -1,14 +1,64 @@
 .reviews {
-  &__item {
+  &__list {
+    padding: 0;
     margin: 0;
   }
 
+  &__item {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__author {
+    margin-top: 50px;
+    color: $base-black;
+
     @include base-size(18px, 700, 30px);
     font-style: normal;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 24px;
+    }
   }
 
   &__text {
+    margin: 0;
+
     @include base-size(14px, 400, 30px);
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      @include base-size(18px, 400, 30px);
+      order: -1;
+    }
+  }
+
+  &__data {
+    display: none;
+
+    @include base-size(14px, 400, 30px);
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 18px;
+    }
+  }
+
+  &__toggles {
+    display: none;
+
+    @media (max-width: $tablet-width) {
+      display: block;
+      text-align: center;
+    }
   }
 }

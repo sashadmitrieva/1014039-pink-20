@@ -1,31 +1,40 @@
 .advantages {
   padding-top: 46px;
-  display: flex;
-  flex-direction: column;
+
+  &__wrapper {
+    background-color: $base-grey;
+
+    @media (max-width: $mobile-width) {
+      padding-bottom: 325px;
+      background-image: url("../img/iphone-screen-mobile@1x.png");
+      background-repeat: no-repeat;
+      background-position: 50% 110%;
+    }
+  }
 
 
   &__intro,
   &__info {
     margin: 0;
+    text-align: center;
 
     @include base-size(24px, 300, 29px);
+
+    @media (min-width: $tablet-width) {
+      @include base-size(40px, 300, 54px);
+    }
+
+    @media (min-width: $desktop-width) {
+      @include base-size(50px, 300, 68px);
+    }
   }
 
   &__list {
-
+    margin: 0;
     padding: 0;
     list-style: none;
-    background-color: $base-grey;
 
-    @media (max-width: $mobile-width) {
-      background-image: url("../img/iphone-screen-mobile@1x.png");
-      background-repeat: no-repeat;
-      background-position: bottom;
-      padding-bottom: 325px;
-    }
-
-    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-      padding-left: 310px;
+    @media (width: $tablet-width) {
       background-image: url("../img/iphone-screen-3-tablet@1x.png");
       background-repeat: no-repeat;
       background-position: left;
@@ -38,6 +47,10 @@
   }
 
   &__item {
+    @media (width: $tablet-width) {
+      padding-left: 300px;
+    }
+
     @media (min-width: $desktop-width) {
       padding-top: 350px;
 
