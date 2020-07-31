@@ -107,34 +107,48 @@
       <p class="photo__text">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
     </section>
 
-    <section class="post">
-      <div class="container">
-        <h2 class="visually-hidden">Редактирование фотографии</h2>
-        <img class="post__img" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Зимняя дорога">
+    <section class="post container">
+      <div class="post__container ">
+      <h2 class="visually-hidden">Редактирование фотографии</h2>
+      <img class="post__img" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Зимняя дорога">
 
-        <form class="post__form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset>
-            <ul class="post__list filter-list">
-              <li class="filter-list__item">
-                <label for="filter-cut">
-                  <input class="filter-list__filter-cut" type="radio" name="filter" value="cut" id="filter-cut" checked></label>
-              </li>
-              <li class="filter-list__item">
-                <label for="filter-repaint">
-                  <input class="filter-list__filter-repaint" type="radio" name="filter" value="repaint" id="filter-repaint"></label>
-              </li>
-              <li class="filter-list__item">
-                <label for="filter-contrast">
-                  <input class="filter-list__filter-contrast" type="radio" name="filter" value="contrast" id="filter-contrast"></label>
-              </li>
-            </ul>
-          </fieldset>
-          <label for="filter-range">
-            <input class="post__range" type="range" id="filter-range" aria-label="Контроллер значений фильтра">
-          </label>
+      <form class="post__form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="post__fieldset">
+          <ul class="post__list">
+            <li class="post__item">
+              <label class="post__label" for="filter-cut">
+                <input class="post__filter-cut" type="radio" name="filter" value="cut" id="filter-cut" checked>
+              </label>
+              <label class="post__label-notmobile" for="filter-range">
+                <input class="post__range" type="range" id="filter-range" aria-label="Контроллер значений фильтра">
+              </label>
+            </li>
+            <li class="post__item">
+              <label for="filter-repaint">
+                <input class="post__filter-repaint" type="radio" name="filter" value="repaint" id="filter-repaint">
+              </label>
+              <label class="post__label-notmobile" for="filter-range">
+                <input class="post__range" type="range" id="filter-range" aria-label="Контроллер значений фильтра">
+              </label>
+            </li>
+            <li class="post__item">
+              <label for="filter-contrast">
+                <input class="post__filter-contrast" type="radio" name="filter" value="contrast" id="filter-contrast">
+              </label>
+              <label class="post__label-notmobile" for="filter-range">
+                <input class="post__range" type="range" id="filter-range" aria-label="Контроллер значений фильтра">
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <label class="post__label-onlymobile" for="filter-range">
+          <input class="post__range" type="range" id="filter-range" aria-label="Контроллер значений фильтра">
+        </label>
+        <div class="post__btn-area">
           <button class="post__btn-submit" type="submit">Запостить</button>
           <button class="post__btn-reset" type="reset">Отмена</button>
-        </form>
+        </div>
+      </form>
       </div>
     </section>
   </main>
