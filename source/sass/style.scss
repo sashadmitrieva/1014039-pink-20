@@ -6,14 +6,22 @@
 @import "site-list";
 @import "promo-list";
 @import "advantages";
+@import "research";
 @import "photo";
 @import "photo-item";
 @import "competition";
 @import "post";
 @import "price";
+@import "area-list";
 @import "reviews";
 @import "feedback";
 @import "page-footer";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -23,16 +31,17 @@ body {
 }
 
 .container {
-  width: 280px;
+  width: 320px;
   margin: 0 auto;
   padding: 0 20px;
 
   @media (min-width: $tablet-width) {
-    width: 620px;
+    width: 660px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 940px;
+    width: 960px;
+    padding: 0 10px;
   }
 }
 
