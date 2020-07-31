@@ -1,20 +1,60 @@
 .feedback {
   &__info {
     @include base-size(24px, 300, 29px);
+    text-align: center;
+    margin: 0 auto;
+    max-width: 470px;
+
+    @media (min-width: $tablet-width) {
+      @include base-size(40px, 300, 54px);
+    }
+
+    @media (min-width: $desktop-width) {
+      @include base-size(50px, 300, 68px);
+    }
   }
 
   &__list {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin: 0;
+    width: 310px;
+
+    @media (min-width: $desktop-width) {
+      &:first-child {
+        order: -1;
+      }
+
+      &:nth-of-type(2) {
+        order: 1;
+      }
+    }
   }
 
   &__title {
+    margin: 0;
+
     @include base-size(18px, 700, 25px);
+    text-align: center;
   }
 
   &__text {
+    margin: 0;
+
     @include base-size(24px, 300, 33px);
+    text-align: center;
+    color: $base-pink;
+    max-width: 250px;
+  }
+
+  &__link {
     color: $base-pink;
   }
 }

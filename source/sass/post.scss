@@ -1,5 +1,79 @@
 .post {
-  background-color: $base-grey;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    background-color: $base-grey;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 57px;
+      padding-bottom: 54px;
+      flex-direction: row;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 57px;
+      padding-bottom: 57px;
+      padding-left: 80px;
+      padding-right: 60px;
+    }
+  }
+
+  &__label-notmobile {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
+
+  &__label-onlymobile {
+    display: none;
+
+    @media (max-width: $mobile-width) {
+      display: block;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 45px;
+      width: 300px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 90px;
+      width: 500px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__btn-area {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $desktop-width) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
 
   &__btn-submit {
     color: $base-pink;
