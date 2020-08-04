@@ -1,26 +1,81 @@
 .advantages {
-  padding-top: 46px;
+  padding-top: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 47px;
+  }
 
   &__wrapper {
+    position: relative;
     background-color: $base-grey;
+    padding-top: 51px;
+    overflow: hidden;
 
     @media (max-width: $mobile-width) {
-      padding-bottom: 325px;
+      padding-bottom: 270px;
       background-image: url("../img/iphone-screen-mobile@1x.png");
       background-repeat: no-repeat;
-      background-position: 50% 110%;
+      background-position: 50% 108%;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 1200px;
+      top: -30px;
+      height: 695px;
+      background-image: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='1200px' height='94.074px' viewBox='0 0 1200 94.074' enable-background='new 0 0 1200 94.074' xml:space='preserve'%3E%3Cpolygon fill='%23ffffff' points='1200,0 0,0 0,94.074 '/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+    }
+
+    @media (width: $tablet-width) {
+      padding-top: 51px;
+      padding-bottom: 0;
+      background-image: url("../img/iphone-screen-3-tablet@1x.png");
+      background-repeat: no-repeat;
+      background-position: 20px bottom;
+      background-size: 268px 481px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 40px;
+
+      &::before {
+        top: 0;
+      }
     }
   }
 
-
-  &__intro,
-  &__info {
+  &__intro {
     margin: 0;
+    padding-bottom: 30px;
     text-align: center;
 
     @include base-size(24px, 300, 29px);
 
     @media (min-width: $tablet-width) {
+      padding-bottom: 0;
+
+      @include base-size(40px, 300, 54px);
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 17px;
+
+      @include base-size(50px, 300, 68px);
+    }
+  }
+
+  &__info {
+    text-align: center;
+    margin: 0 auto;
+
+    @include base-size(24px, 300, 29px);
+
+    @media (min-width: $tablet-width) {
+      max-width: 430px;
+      padding-bottom: 19px;
+
       @include base-size(40px, 300, 54px);
     }
 
@@ -32,27 +87,33 @@
   &__list {
     margin: 0;
     padding: 0;
+    padding-top: 60px;
+    padding-bottom: 10px;
     list-style: none;
+    text-align: center;
 
     @media (width: $tablet-width) {
-      background-image: url("../img/iphone-screen-3-tablet@1x.png");
-      background-repeat: no-repeat;
-      background-position: left;
-      background-size: contain;
+      padding-top: 35px;
+      text-align: left;
     }
 
     @media (min-width: $desktop-width) {
+      padding-top: 0;
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
 
   &__item {
     @media (width: $tablet-width) {
-      padding-left: 300px;
+      padding-left: 310px;
     }
 
     @media (min-width: $desktop-width) {
-      padding-top: 350px;
+      padding-top: 358px;
+      width: 300px;
+      z-index: 1;
 
       &:nth-of-type(1) {
         background-image: url("../img/iphone-screen-1-desktop@1x.png");
@@ -77,16 +138,38 @@
 
   &__title {
     margin: 0;
-    margin-bottom: 24px;
+    margin-bottom: 11px;
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
     color: $base-black;
+
+    @media (min-width: $desktop-width) {
+      @include base-size(30px, 700, 30px);
+      max-width: 240px;
+      margin: auto;
+      margin-bottom: 23px;
+    }
   }
 
   &__desc {
     margin: 0;
+    margin-bottom: 35px;
+
+    br {
+      display: none;
+    }
 
     @include base-size(14px, 400, 24px);
+
+    @media (min-width: $desktop-width) {
+      margin: 0 24px;
+
+      @include base-size(18px, 400, 30px);
+
+      br {
+        display: block;
+      }
+    }
   }
 }

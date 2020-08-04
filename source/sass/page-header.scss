@@ -2,6 +2,12 @@
   color: $base-white;
   background-color: $base-blue;
 
+  &__top-cover {
+    @media (min-width: $desktop-width) {
+      background-color: $base-cover;
+    }
+  }
+
   @media (min-width: $desktop-width) {
     min-height: 394px;
     background-image: url("../img/bg-back-desktop@1x.jpg");
@@ -11,25 +17,33 @@
 
   &--index {
     @media (min-width: $desktop-width) {
-      min-height: 742px;
+      min-height: 853px;
       background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
       background-repeat: no-repeat;
-      background-position: bottom center;
+      background-position: center bottom, center;
     }
   }
 
-  &__top {
+  &__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     @media (min-width: $desktop-width) {
       flex-direction: row;
+
+      &--desktop {
+        width: 960px;
+        padding: 0 10px;
+        margin: 0 auto;
+      }
     }
   }
 
   &__logo {
+    display: block;
     height: 69px;
+    padding-top: 24px;
 
     @media (min-width: $tablet-width) {
       height: 110px;
@@ -51,7 +65,6 @@
       min-height: 330px;
       background-image: url("../img/bg-back-tablet@1x.jpg");
       background-repeat: no-repeat;
-      background-position: 50% -110px;
     }
 
     &--index {
@@ -72,40 +85,91 @@
         height: 396px;
         background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
         background-repeat: no-repeat;
-        background-position: bottom, center;
+        background-position: 0 115px, center;
         background-size: auto, cover;
       }
     }
   }
 
   &__slogan {
-    @include base-size(24px, 300, 33px);
     margin: 0;
     display: block;
 
-    &--main {
-      line-height: 29px;
-    }
+    @include base-size(24px, 300, 33px);
+    text-align: center;
+    padding-top: 29px;
 
     @media (min-width: $tablet-width) {
+      @include base-size(40px, 300, 48px);
+    }
+
+    @media (min-width: $desktop-width) {
       @include base-size(50px, 300, 68px);
+    }
+
+    &--main {
+      line-height: 29px;
+
+      @media (min-width: $tablet-width) {
+        width: 300px;
+        padding-top: 92px;
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-bottom: 32px;
+        line-height: 48px;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding-top: 100px;
+        padding-bottom: 40px;
+        line-height: 68px;
+      }
     }
   }
 
   &__bottom {
+    min-height: 271px;
+    display: flex;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    flex-direction: column;
+    justify-content: space-between;
+
     @media (max-width: $mobile-width) {
       background-color: $base-blue;
+    }
+
+    @media (min-width: $tablet-width) {
+      max-width: 300px;
+      min-height: 232px;
+      padding: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 274px;
     }
   }
 
   &__button {
+    padding-top: 14px;
+    padding-bottom: 16px;
+
     @include base-btn($base-white, 29px);
     background-color: $base-blue;
     color: $base-white;
+
+    @media (min-width: $tablet-width) {
+      background-color: transparent;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 21px;
+    }
   }
 
   &__available {
     margin: 0;
+    text-align: center;
 
     @include base-size(14px, 300, 24px);
 
@@ -120,5 +184,15 @@
     list-style: none;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  &__item {
+    margin-right: 35px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
