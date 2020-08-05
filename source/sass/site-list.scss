@@ -1,19 +1,45 @@
 .site-list {
-  @media (min-width: $desktop-width) {
-    width: 620px;
-    display: flex;
-    flex-direction: row;
-  }
-
-  @include base-size(18px, 700, 32px);
-  text-transform: uppercase;
   list-style: none;
   padding: 0;
   margin: 0;
 
+  @media (max-width: $tablet-width) {
+    @include base-size(18px, 700, 32px);
+    text-transform: uppercase;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 700px;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row;
+
+    @include base-size(18px, 400, 18px);
+  }
+
   &__item {
-    & a {
+    a {
+      display: block;
       color: $base-white;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 1px;
+      box-shadow: 0 1px 0 $base-black, inset 0 1px 0 $base-shadow;
+    }
+
+    @media (min-width: $desktop-width) {
+      &--active {
+        padding-bottom: 10px;
+        border-bottom: 2px solid $base-white;
+      }
+      margin-left: 79px;
     }
   }
 }
