@@ -16,11 +16,6 @@
     text-align: center;
   }
 
-  &__img img {
-    width: 320px;
-    height: 137px;
-  }
-
   &__list {
     list-style: none;
     padding: 0;
@@ -32,13 +27,13 @@
 
     @media (min-width: $tablet-width) {
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: repeat(3, min-content);
       gap: 20px;
     }
 
     @media (min-width: $desktop-width) {
       grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: repeat(2, min-content);
     }
   }
 
@@ -47,8 +42,23 @@
     background-color: $base-grey;
 
     @media (min-width: $tablet-width) {
-      width: 300px;
-      // min-height: 455px;
+      min-width: 300px;
+
+      &:first-of-type {
+        width: 100%;
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      min-width: 300px;
+
+      &:first-of-type {
+        width: 100%;
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+      }
     }
   }
 
@@ -59,11 +69,7 @@
     padding-bottom: 25px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-
-    &--panorama {
-      margin-bottom: 20px;
-    }
+    align-content: space-between;
 
     @media (min-width: $tablet-width) {
       min-height: 155px;
@@ -77,6 +83,32 @@
         @media (min-width: $desktop-width) {
           min-height: 96px;
         }
+      }
+    }
+  }
+
+  &__top {
+    width: 100%;
+    display: flex;
+
+    @media (min-width: $tablet-width) {
+      &--panorama {
+        width: 50%;
+      }
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    display: flex;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+
+      &--panorama {
+        width: 50%;
+        justify-content: flex-start;
       }
     }
   }
@@ -101,8 +133,11 @@
     @include base-size(14px, 400, 24px);
 
     @media (min-width: $tablet-width) {
+      min-height: 50px;
+
       &--panorama {
-        order: 3;
+        order: 1;
+        margin-bottom: 0;
       }
     }
   }
@@ -116,8 +151,7 @@
     background-position: 0 center;
 
     @media (min-width: $tablet-width) {
-      order: 2;
-      margin-left: auto;
+      margin-left: 0;
     }
   }
 
@@ -131,6 +165,10 @@
 
     @media (min-width: $tablet-width) {
       margin-left: 0;
+
+      &--panorama {
+        margin-right: 16px;
+      }
     }
   }
 
