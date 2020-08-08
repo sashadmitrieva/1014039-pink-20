@@ -3,38 +3,44 @@
   padding: 0;
   margin: 0;
 
-  @media (max-width: $tablet-width) {
-    @include base-size(18px, 700, 32px);
-    text-transform: uppercase;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
+  @include base-size(18px, 700, 32px);
+  text-transform: uppercase;
+  text-align: center;
 
   @media (min-width: $desktop-width) {
     width: 700px;
-    margin-top: 35px;
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
+    text-transform: none;
 
     @include base-size(18px, 400, 18px);
   }
 
   &__item {
+    padding-bottom: 10px;
+    margin-bottom: 1px;
+    box-shadow: 0 1px 0 $base-black, inset 0 1px 0 $base-shadow;
+
     a {
       display: block;
       color: $base-white;
-      padding-top: 15px;
-      padding-bottom: 15px;
-    }
+      padding-top: 16px;
 
-    @media (max-width: $tablet-width) {
-      margin-bottom: 1px;
-      box-shadow: 0 1px 0 $base-black, inset 0 1px 0 $base-shadow;
+      @media (max-width: $tablet-width + 299px) {
+        &:hover {
+          color: $base-pink;
+        }
+
+        &:active {
+          color: $special-pink;
+        }
+      }
     }
 
     @media (min-width: $desktop-width) {
+      box-shadow: none;
+
       &--active {
         padding-bottom: 10px;
         border-bottom: 2px solid $base-white;

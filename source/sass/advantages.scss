@@ -106,12 +106,13 @@
   }
 
   &__item {
-    @media (width: $tablet-width) {
+    @media (min-width: $tablet-width) {
       padding-left: 310px;
     }
 
     @media (min-width: $desktop-width) {
-      padding-top: 358px;
+      padding-left: 0;
+      padding-top: 354px;
       width: 300px;
       z-index: 1;
 

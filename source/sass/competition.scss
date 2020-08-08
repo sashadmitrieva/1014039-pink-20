@@ -1,23 +1,206 @@
 .competition {
   &__promo {
+    margin: 0;
+    padding-top: 45px;
+
     @include base-size(14px, 400, 30px);
+    text-align: center;
 
     @media (min-width: $tablet-width) {
       font-size: 18px;
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-top: 90px;
+      padding-bottom: 70px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 70px;
+      padding-left: 70px;
+    }
+  }
+
+  &__fill {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: inline;
+    }
+  }
+
+  // Стилизация полей
+
+  &__fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+
+    @media (min-width: $tablet-width) {
+      border: 2px solid $base-border;
+
+      &--name {
+        border: none;
+      }
+
+      &:not(:first-child) {
+        padding-top: 45px;
+
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+    }
+  }
+
+  // Стилизация текстовых полей
+
+  &__input-area {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &--contacts {
+      @media (min-width: $desktop-width) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content;
+        grid-column-gap: 74px;
+      }
+    }
+  }
+
+  &__input-item {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 34px;
+      flex-direction: row;
+      align-items: baseline;
+    }
+
+    &--contacts {
+      @media (min-width: $tablet-width) {
+        flex-direction: column-reverse;
+      }
+
+      @media (min-width: $desktop-width) {
+        display: flex;
+        flex-direction: column-reverse;
+      }
     }
   }
 
   &__name {
     color: $base-pink;
     text-transform: uppercase;
+    padding-left: 23px;
+    padding-bottom: 4px;
+    margin-right: 18px;
 
     @include base-size(14px, 400, 30px);
+
+    @media (min-width: $tablet-width) {
+      padding-left: 0;
+    }
   }
 
   &__field::placeholder {
     @include base-size(18px, 400, 30px);
     color: $base-blue;
+    font-family: "Open Sans", "Arial", sans-serif;
   }
+
+  // Стилизация текста внутри инпутов
+
+  input[type~="text"] {
+    font-size: 14px;
+  }
+
+  // Стилизация чекбоксов
+
+  &__checkbox-item {
+    padding-left: 59px;
+    margin-bottom: 53px;
+
+    &:nth-of-type(2) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+
+    &:nth-of-type(5) {
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;
+    }
+  }
+
+  &__checkboxarea {
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: min-content min-content;
+    }
+  }
+
+  &__field {
+    border: 2px solid $base-border;
+    border-radius: 3px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    width: 100%;
+
+    &:hover {
+      border-color: $base-blue;
+    }
+
+    &:active {
+      border-color: $base-pink;
+    }
+
+    & + label::before {
+      position: absolute;
+      content: "";
+      top: -6px;
+      left: -58px;
+      width: 38px;
+      height: 38px;
+      border: 2px solid $base-border;
+      border-radius: 2px;
+      background-color: $base-white;
+    }
+
+    & + label:hover::before {
+      border-color: $base-blue;
+    }
+
+    & + label:active::before {
+      border-color: $base-pink;
+    }
+
+    &:checked + label::after {
+      position: absolute;
+      content: "";
+      top: 4px;
+      left: -50px;
+      width: 22px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='21.698px' height='16.09px' viewBox='-82.357 4.875 21.698 16.09' enable-background='new -82.357 4.875 21.698 16.09' xml:space='preserve'%3E%3Cpath fill='%23d22856' d='M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z'/%3E%3C/svg%3E%0A");
+    }
+  }
+
+
+  &__label {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+    @include base-size(18px, 400, 30px);
+    color: $base-blue;
+  }
+
+  // Стилизация радиокнопок
 
   &__checkboxarea,
   &__radioarea {
@@ -26,88 +209,152 @@
     margin: 0;
   }
 
-  &__fieldset {
-    padding: 0;
-    margin: 0;
-    border-color: $base-border;
+  &__radioitem {
+    padding-left: 70px;
+    margin-bottom: 45px;
 
-    @media (max-width: $mobile-width) {
-      border: none;
-
-      &--bgc {
-        background-color: $base-grey;
-      }
-    }
-
-    @media (min-width: $tablet-width) {
-      &:first-child {
-        border: none;
-      }
+    @media (min-width: $desktop-width) {
+      padding-left: 80px;
     }
   }
 
-  &__input-area {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+  &__radioinput {
+    & + label::before {
+      position: absolute;
+      content: "";
+      top: -7px;
+      left: -68px;
+      width: 39px;
+      height: 39px;
+      border: 2px solid $base-border;
+      border-radius: 50%;
+    }
 
-  &__input-item {
-    display: flex;
-    flex-direction: column;
+    & + label:hover::before {
+      border-color: $base-blue;
+    }
 
-    @media (min-width: $tablet-width) {
-      flex-direction: row;
+    & + label:active::before {
+      border-color: $base-pink;
+    }
+
+    &:checked + label::after {
+      position: absolute;
+      content: "";
+      top: 5px;
+      left: -56px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $base-pink;
     }
   }
 
   &__radiolabel {
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+
     @include base-size(18px, 400, 30px);
   }
+
+  // Стилизация легенд
 
   &__intro {
     @include base-size(14px, 400, 18px);
     color: $base-pink;
     text-transform: uppercase;
     text-align: center;
+
+    &--contacts {
+      display: none;
+
+      @media (min-width: $tablet-width) {
+        display: block;
+      }
+    }
   }
+
+  // Стилизация поля ввода текста
 
   &__emotionarea {
     @include base-size(18px, 400, 30px);
     font-family: "Open Sans", "Arial", sans-serif;
     color: $base-blue;
+    border: 2px solid $base-border;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    min-height: 197px;
   }
 
-  &__label {
-    @include base-size(18px, 400, 30px);
-    color: $base-blue;
-  }
+  // Стилизация кнопок
 
   &__btn-area {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1 fr;
+    grid-template-rows: min-content min-content;
 
     @media (min-width: $tablet-width) {
-      flex-direction: row;
-      justify-content: space-between;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 20px;
+      grid-template-rows: min-content;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: 300px 1fr 330px;
     }
   }
 
   &__btn {
+    display: inline-block;
+    padding-top: 16px;
+    padding-bottom: 17px;
     background-color: $base-green;
     border: none;
-    border-radius: 1px;
+    border-radius: 3px;
     color: $base-white;
     font-family: "Open Sans", "Arial", sans-serif;
     text-transform: uppercase;
 
     @include base-size(18px, 700, 30px);
+
+    &:hover {
+      background-color: $special-green;
+    }
+
+    &:disabled {
+      background-color: $base-border;
+    }
+
+    &:active > span {
+      opacity: 0.3;
+    }
   }
 
   &__legend {
     @include base-size(14px, 400, 30px);
     text-transform: uppercase;
     text-align: center;
+
+    @media (min-width: $tablet-width) {
+      text-align: right;
+      align-self: center;
+      justify-self: end;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: 3 / 4;
+    }
+  }
+
+  &__required {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: inline-block;
+    }
   }
 
   &__star {
