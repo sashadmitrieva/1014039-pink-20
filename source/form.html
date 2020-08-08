@@ -49,13 +49,12 @@
   <main>
     <section class="competition container">
       <h2 class="visually-hidden">Конкурс</h2>
-      <p class="competition__promo">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+      <p class="competition__promo">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="competition__fill">Пожалуйста, заполните форму ниже:</span></p>
       <form class="competition__form" action="https://echo.htmlacademy.ru" method="post">
-
         <div class="competition__area area-list">
 
-          <fieldset class="competition__fieldset area-list__item area-list__item--name">
-            <ul class="competition__input-area">
+          <fieldset class="competition__fieldset competition__fieldset--name area-list__item area-list__item--name">
+            <ul class="competition__input-area competition__input-area--name">
               <li class="competition__input-item">
                 <label class="competition__name" for="lastname">Фамилия:</label>
                 <input class="competition__field" type="text" name="lastname" id="lastname" placeholder="Укажите фамилию *" required>
@@ -70,80 +69,79 @@
               </li>
             </ul>
           </fieldset>
+            <fieldset class="competition__fieldset competition__fieldset--achievements competition__fieldset--bgc area-list__item area-list__item--achievements">
+              <legend class="competition__intro">Ваши безбашенные достижения в путешествии</legend>
+              <ul class="competition__checkboxarea">
+                <li class="competition__checkbox-item">
+                  <input class="visually-hidden competition__field" type="checkbox" name="selfie" id="checkbox-selfie" checked>
+                  <label class="competition__label" for="checkbox-selfie">Сделал селфи с акулой</label>
+                </li>
+                <li class="competition__checkbox-item">
+                  <input class="visually-hidden competition__field" type="checkbox" name="tan" id="checkbox-tan" checked>
+                  <label class="competition__label" for="checkbox-tan">Обгорел на пляже</label>
+                </li>
+                <li class="competition__checkbox-item">
+                  <input class="visually-hidden competition__field" type="checkbox" name="norris" id="checkbox-norris">
+                  <label class="competition__label" for="checkbox-norris">Видел Чака Норриса</label>
+                </li>
+                <li class="competition__checkbox-item">
+                  <input class="visually-hidden competition__field" type="checkbox" name="souvenir" id="checkbox-souvenir">
+                  <label class="competition__label" for="checkbox-souvenir">Накупил сувениров</label>
+                </li>
+                <li class="competition__checkbox-item">
+                  <input class="visually-hidden competition__field" type="checkbox" name="tower" id="checkbox-tower" checked>
+                  <label class="competition__label" for="checkbox-tower">Удержал башню</label>
+                </li>
+                <li class="competition__checkbox-item">
+                  <input class="visually-hidden competition__field" type="checkbox" name="hotel" id="checkbox-hotel">
+                  <label class="competition__label" for="checkbox-hotel">Разгромил отель</label>
+                </li>
+              </ul>
+            </fieldset>
 
-          <fieldset class="competition__fieldset competition__fieldset--bgc area-list__item area-list__item--achievements">
-            <legend class="competition__intro">Ваши безбашенные достижения в путешествии</legend>
-            <ul class="competition__checkboxarea">
-              <li class="competition__checkbox-item">
-                <input class="competition__field" type="checkbox" name="selfie" id="checkbox-selfie" checked>
-                <label class="competition__label" for="checkbox-selfie">Сделал селфи с акулой</label>
-              </li>
-              <li class="competition__checkbox-item">
-                <input class="competition__field" type="checkbox" name="tan" id="checkbox-tan" checked>
-                <label class="competition__label" for="checkbox-tan">Обгорел на пляже</label>
-              </li>
-              <li class="competition__checkbox-item">
-                <input class="competition__field" type="checkbox" name="norris" id="checkbox-norris">
-                <label class="competition__label" for="checkbox-norris">Видел Чака Норриса</label>
-              </li>
-              <li class="competition__checkbox-item">
-                <input class="competition__field" type="checkbox" name="souvenir" id="checkbox-souvenir">
-                <label class="competition__label" for="checkbox-souvenir">Накупил сувениров</label>
-              </li>
-              <li class="competition__checkbox-item">
-                <input class="competition__field" type="checkbox" name="tower" id="checkbox-tower" checked>
-                <label class="competition__label" for="checkbox-tower">Удержал башню</label>
-              </li>
-              <li class="competition__checkbox-item">
-                <input class="competition__field" type="checkbox" name="hotel" id="checkbox-hotel">
-                <label class="competition__label" for="checkbox-hotel">Разгромил отель</label>
-              </li>
-            </ul>
-          </fieldset>
-
-          <fieldset class="competition__fieldset area-list__item area-list__item--contacts">
-            <legend class="competition__intro">Контактная информация</legend>
-            <ul class="competition__input-area competition__input-area--contacts">
-              <li class="competition__input-item">
+          <fieldset class="competition__fieldset competition__fieldset--contacts area-list__item area-list__item--contacts">
+            <legend class="competition__intro competition__intro--contacts">Контактная информация</legend>
+            <ul class="competition__input-area competition__input-area--contacts competition__input-area--contacts">
+              <li class="competition__input-item competition__input-item--contacts">
                 <label class="competition__name" for="phone">Номер телефона</label>
-                <input class="competition__field" type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста">
+                <input class="competition__field competition__field--contacts" type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста">
               </li>
-              <li class="competition__input-item">
+              <li class="competition__input-item competition__input-item--contacts">
                 <label class="competition__name" for="email">Адрес почты</label>
-                <input class="competition__field" type="email" name="email" id="email" placeholder="Введите почту *" required>
+                <input class="competition__field competition__field--contacts" type="email" name="email" id="email" placeholder="Введите почту *" required>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="competition__fieldset competition__fieldset--bgc area-list__item area-list__item--app">
+          <fieldset class="competition__fieldset competition__fieldset--app competition__fieldset--bgc area-list__item area-list__item--app">
             <legend class="competition__intro">С каким приложением путешествовали?</legend>
             <ul class="competition__radioarea">
               <li class="competition__radioitem">
-                <input type="radio" name="pink" id="ios" value="forios" checked>
+                <input class="visually-hidden competition__radioinput" type="radio" name="pink" id="ios" value="forios" checked>
                 <label class="competition__radiolabel" for="ios">Pink для iOS</label>
               </li>
               <li class="competition__radioitem">
-                <input type="radio" name="pink" id="android" value="forandroid">
+                <input class="visually-hidden competition__radioinput" type="radio" name="pink" id="android" value="forandroid">
                 <label class="competition__radiolabel" for="android">Pink на Android</label>
               </li>
               <li class="competition__radioitem">
-                <input type="radio" name="pink" id="windows" value="forwindows">
+                <input class="visually-hidden competition__radioinput" type="radio" name="pink" id="windows" value="forwindows">
                 <label class="competition__radiolabel" for="windows">Windows Phone</label>
               </li>
             </ul>
           </fieldset>
 
 
-          <fieldset class="competition__fieldset area-list__item area-list__item--reviews">
+          <fieldset class="competition__fieldset competition__fieldset--reviews area-list__item area-list__item--reviews">
             <legend class="competition__intro">Опишите свои эмоции</legend>
-            <label class="competition__intro" for="emotion"></label>
-            <textarea class="competition__emotionarea" name="emotion" rows="8">Можно прям в красках, не стесняясь в выражениях</textarea>
+            <label class="competition__intro" for="emotion">
+              <textarea class="competition__emotionarea" name="emotion">Можно прям в красках, не стесняясь в выражениях</textarea></label>
           </fieldset>
         </div>
 
         <div class="competition__btn-area">
-          <button class="competition__btn" type="submit">Отправить форму</button>
-          <small class="competition__legend"><span class="competition__star">*</span> — обязательные поля</small>
+          <button class="competition__btn" type="submit"><span>Отправить форму</span></button>
+          <small class="competition__legend"><span class="competition__star">*</span> — обязательные <span class="competition__required">для заполнения</span> поля</small>
         </div>
       </form>
     </section>

@@ -41,7 +41,7 @@
     </div>
     <div class="page-header__container">
       <div class="page-header__middle container">
-        <p class="page-header__slogan">Фотографии пользователей</p>
+        <p class="page-header__slogan">Фотографии<br> пользователей</p>
       </div>
     </div>
   </header>
@@ -159,50 +159,48 @@
       </div>
     </section>
 
-    <section class="post container">
-      <div class="post__container ">
-        <h2 class="visually-hidden">Редактирование фотографии</h2>
-        <img class="post__img" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Зимняя дорога">
+    <section class="post">
+      <div class="container">
+        <div class="post__container">
+          <h2 class="visually-hidden">Редактирование фотографии</h2>
+          <img class="post__img" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Зимняя дорога">
 
-        <form class="post__form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="post__fieldset">
+          <form class="post__form" action="https://echo.htmlacademy.ru" method="post">
             <ul class="post__list">
               <li class="post__item">
-                <label class="post__label" for="filter-cut">
-                  <input class="post__filter-cut" type="radio" name="filter" value="cut" id="filter-cut" checked>
-                </label>
-                <label class="post__label-notmobile" for="filter-range">
+                <input class="visually-hidden post__filter post__filter--cut" type="radio" name="filter" value="cut" id="filter-cut" checked>
+                <label class="post__label post__label--mobile" for="filter-cut"></label>
+                <label class="post__label post__label--mintablet" for="filter-range">
                   <input class="post__range" type="range" id="filter-range" aria-label="Контроллер значений фильтра">
                 </label>
               </li>
               <li class="post__item">
-                <label for="filter-repaint">
-                  <input class="post__filter-repaint" type="radio" name="filter" value="repaint" id="filter-repaint">
-                </label>
-                <label class="post__label-notmobile" for="filter-range">
+                <input class="visually-hidden post__filter post__filter--mobile post__filter--repaint" type="radio" name="filter" value="repaint" id="filter-repaint">
+                <label class="post__label--mobile" for="filter-repaint"></label>
+                <label class="post__label post__label--mintablet" for="filter-range">
                   <input class="post__range" type="range" id="filter-range" aria-label="Контроллер значений фильтра">
                 </label>
               </li>
               <li class="post__item">
-                <label for="filter-contrast">
-                  <input class="post__filter-contrast" type="radio" name="filter" value="contrast" id="filter-contrast">
-                </label>
-                <label class="post__label-notmobile" for="filter-range">
-                  <input class="post__range" type="range" id="filter-range" aria-label="Контроллер значений фильтра">
+                <input class="visually-hidden post__filter post__filter--mobile post__filter--contrast" type="radio" name="filter" value="contrast" id="filter-contrast">
+                <label class="post__label--mobile" for="filter-contrast"></label>
+                <label class="post__label post__label--mintablet" for="filter-range">
+                  <input class=" post__range" type="range" id="filter-range" aria-label="Контроллер значений фильтра">
                 </label>
               </li>
             </ul>
-          </fieldset>
-          <label class="post__label-onlymobile" for="filter-range">
-            <input class="post__range" type="range" id="filter-range" aria-label="Контроллер значений фильтра">
-          </label>
-          <div class="post__btn-area">
-            <button class="post__btn-submit" type="submit">Запостить</button>
-            <button class="post__btn-reset" type="reset">Отмена</button>
-          </div>
-        </form>
+            <label class="post__label post__label--mobile-only" for="filter-range">
+              <input class="post__range" type="range" id="filter-range" aria-label="Контроллер значений фильтра">
+            </label>
+            <div class="post__btn-area">
+              <button class="post__btn post__btn--submit" type="submit"><span>Запостить</span></button>
+              <button class="post__btn post__btn--reset" type="reset"><span>Отмена</span></button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
+
   </main>
 
   <div class="container">
