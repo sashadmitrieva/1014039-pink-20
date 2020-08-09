@@ -11,7 +11,7 @@
     padding-top: 51px;
     overflow: hidden;
 
-    @media (max-width: $mobile-width) {
+    @media (min-width: $mobile-width) {
       padding-bottom: 270px;
       background-image: url("../img/iphone-screen-mobile@1x.png");
       background-repeat: no-repeat;
@@ -28,7 +28,7 @@
       background-repeat: no-repeat;
     }
 
-    @media (width: $tablet-width) {
+    @media (min-width: $tablet-width) {
       padding-top: 51px;
       padding-bottom: 0;
       background-image: url("../img/iphone-screen-3-tablet@1x.png");
@@ -39,6 +39,7 @@
 
     @media (min-width: $desktop-width) {
       padding-top: 40px;
+      background-image: none;
 
       &::before {
         top: 0;

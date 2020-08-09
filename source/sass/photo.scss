@@ -12,8 +12,35 @@
     }
   }
 
-  &__wrapper {
-    text-align: center;
+  &__img {
+    img {
+      width: 280px;
+      height: 180px;
+
+      @media (min-width: $tablet-width) {
+        width: 300px;
+        height: 300px;
+      }
+
+      @media (min-width: $desktop-width) {
+        height: 400px;
+      }
+    }
+
+    & > .photo__wide-pic {
+      width: 320px;
+      height: 137px;
+
+      @media (min-width: $tablet-width) {
+        width: 660px;
+        height: 509px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 1200px;
+        height: 506px;
+      }
+    }
   }
 
   &__list {
@@ -38,7 +65,7 @@
   }
 
   &__item {
-    width: 280px;
+    min-width: 280px;
     background-color: $base-grey;
 
     @media (min-width: $tablet-width) {

@@ -20,6 +20,57 @@
     }
   }
 
+  // Стилизация легенд
+
+  &__intro {
+    @include base-size(14px, 400, 18px);
+    color: $base-pink;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 5px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 0;
+    }
+
+    &--achievements {
+      padding-left: 20px;
+      padding-right: 20px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: -8px;
+      }
+    }
+
+    &--reviews {
+      margin-bottom: -25px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: -2px;
+      }
+    }
+
+    &--app {
+      margin-bottom: -2px;
+
+      @media (min-width: $tablet-width) {
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    &--contacts {
+      display: none;
+
+      @media (min-width: $tablet-width) {
+        display: block;
+      }
+    }
+  }
+
+  // "Пожалуйста, заполните форму ниже:"
+
   &__fill {
     display: none;
 
@@ -34,24 +85,56 @@
     padding: 0;
     margin: 0;
     border: none;
+    padding-top: 35px;
+    padding-bottom: 44px;
+
+    &--reviews {
+      padding-bottom: 0;
+    }
 
     @media (min-width: $tablet-width) {
       border: 2px solid $base-border;
+      padding-top: 45px;
+      padding-left: 60px;
+      padding-right: 60px;
 
       &--name {
         border: none;
+        padding: 0;
       }
 
-      &:not(:first-child) {
-        padding-top: 45px;
+      &--app {
+        padding-bottom: 60px;
+      }
 
-        padding-left: 60px;
-        padding-right: 60px;
+      &--contacts {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      &--app {
+        padding-left: 43px;
+      }
+
+      &--contacts {
+        padding-top: 25px;
+        padding-bottom: 15px;
+      }
+
+      &--achievements {
+        padding-bottom: 15px;
+      }
+
+      &--reviews {
+        padding-top: 30px;
+        padding-bottom: 0;
       }
     }
   }
 
-  // Стилизация текстовых полей
+  //  Микросетки текстовых полей
 
   &__input-area {
     margin: 0;
@@ -71,14 +154,28 @@
   &__input-item {
     display: flex;
     flex-direction: column;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 34px;
       flex-direction: row;
       align-items: baseline;
+
+      &--name {
+        margin-bottom: 50px;
+      }
+
+      &--contacts {
+        margin-bottom: 25px;
+      }
     }
 
     &--contacts {
+      position: relative;
+
       @media (min-width: $tablet-width) {
         flex-direction: column-reverse;
       }
@@ -86,11 +183,14 @@
       @media (min-width: $desktop-width) {
         display: flex;
         flex-direction: column-reverse;
+        margin-bottom: 0;
       }
     }
   }
 
-  &__name {
+  // Стилизация полей ввода личных данных
+
+  &__input-label {
     color: $base-pink;
     text-transform: uppercase;
     padding-left: 23px;
@@ -101,26 +201,91 @@
 
     @media (min-width: $tablet-width) {
       padding-left: 0;
+
+      &--contacts {
+        padding-top: 8px;
+        padding-left: 20px;
+      }
     }
   }
 
-  &__field::placeholder {
+  &__input-field {
+    border: 2px solid $base-border;
+    border-radius: 3px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-grow: 1;
+    width: 100%;
+
+    &:hover {
+      border-color: $base-blue;
+    }
+
+    &:active {
+      border-color: $base-pink;
+    }
+  }
+
+  // Стилизация поля ввода номера телефона и email
+
+  &__icon {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      display: block;
+      background-color: $base-border;
+      top: 2px;
+      right: 2px;
+      width: 62px;
+      height: 62px;
+      border-radius: 2px;
+
+      & > svg {
+        padding: 20px;
+      }
+    }
+  }
+
+  // Стилизация текста внутри инпутов и placeholder
+
+  input[type~="text"],
+  input[type~="email"] {
+    font-size: 14px;
+  }
+
+  &__input-field::placeholder,
+  &__input-phone::placeholder,
+  &__input-email::placeholder {
     @include base-size(18px, 400, 30px);
     color: $base-blue;
     font-family: "Open Sans", "Arial", sans-serif;
   }
 
-  // Стилизация текста внутри инпутов
+  // Микросетки чекбоксов
 
-  input[type~="text"] {
-    font-size: 14px;
+  &__checkbox-area {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: 260px 250px 210px;
+      grid-template-rows: min-content min-content;
+      grid-column-gap: 50px;
+    }
   }
-
-  // Стилизация чекбоксов
 
   &__checkbox-item {
     padding-left: 59px;
-    margin-bottom: 53px;
+    margin-bottom: 52px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     &:nth-of-type(2) {
       grid-column: 1 / 2;
@@ -133,31 +298,12 @@
     }
   }
 
-  &__checkboxarea {
-    @media (min-width: $desktop-width) {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: min-content min-content;
-    }
-  }
+  // Стилизация чекбоксов
 
-  &__field {
-    border: 2px solid $base-border;
-    border-radius: 3px;
-    padding-top: 25px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    margin-bottom: 15px;
-    flex-grow: 1;
-    width: 100%;
-
-    &:hover {
-      border-color: $base-blue;
-    }
-
-    &:active {
-      border-color: $base-pink;
-    }
+  &__checkbox-field {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
     & + label::before {
       position: absolute;
@@ -190,8 +336,7 @@
     }
   }
 
-
-  &__label {
+  &__checkbox-label {
     position: relative;
     cursor: pointer;
     user-select: none;
@@ -202,23 +347,30 @@
 
   // Стилизация радиокнопок
 
-  &__checkboxarea,
-  &__radioarea {
+  &__radio-area {
     list-style: none;
     padding: 0;
     margin: 0;
   }
 
-  &__radioitem {
+  &__radio-item {
     padding-left: 70px;
     margin-bottom: 45px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-left: 60px;
+    }
 
     @media (min-width: $desktop-width) {
       padding-left: 80px;
     }
   }
 
-  &__radioinput {
+  &__radio-input {
     & + label::before {
       position: absolute;
       content: "";
@@ -250,7 +402,7 @@
     }
   }
 
-  &__radiolabel {
+  &__radio-label {
     position: relative;
     user-select: none;
     cursor: pointer;
@@ -258,26 +410,9 @@
     @include base-size(18px, 400, 30px);
   }
 
-  // Стилизация легенд
+  // Стилизация поля textarea
 
-  &__intro {
-    @include base-size(14px, 400, 18px);
-    color: $base-pink;
-    text-transform: uppercase;
-    text-align: center;
-
-    &--contacts {
-      display: none;
-
-      @media (min-width: $tablet-width) {
-        display: block;
-      }
-    }
-  }
-
-  // Стилизация поля ввода текста
-
-  &__emotionarea {
+  &__text-field {
     @include base-size(18px, 400, 30px);
     font-family: "Open Sans", "Arial", sans-serif;
     color: $base-blue;
@@ -285,18 +420,26 @@
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 15px;
+    padding-top: 10px;
+    margin-bottom: 42px;
     min-height: 197px;
+
+    @media (min-width: $desktop-width) {
+      min-height: 124px;
+    }
   }
 
   // Стилизация кнопок
 
   &__btn-area {
+    padding-top: 44px;
     display: grid;
-    grid-template-columns: 1 fr;
+    grid-template-columns: 1fr;
     grid-template-rows: min-content min-content;
 
     @media (min-width: $tablet-width) {
+      padding-top: 60px;
+      padding-bottom: 35px;
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 20px;
       grid-template-rows: min-content;
@@ -337,8 +480,10 @@
     @include base-size(14px, 400, 30px);
     text-transform: uppercase;
     text-align: center;
+    padding-top: 35px;
 
     @media (min-width: $tablet-width) {
+      padding-top: 0;
       text-align: right;
       align-self: center;
       justify-self: end;
