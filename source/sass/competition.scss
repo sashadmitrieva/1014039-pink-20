@@ -34,6 +34,15 @@
       padding-top: 0;
     }
 
+    &--app,
+    &--achievements {
+      background-color: $base-grey;
+
+      @media (min-width: $tablet-width) {
+        background-color: inherit;
+      }
+    }
+
     &--achievements {
       padding-left: 20px;
       padding-right: 20px;
@@ -90,6 +99,15 @@
 
     &--reviews {
       padding-bottom: 0;
+    }
+
+    &--app,
+    &--achievements {
+      background-color: $base-grey;
+
+      @media (min-width: $tablet-width) {
+        background-color: inherit;
+      }
     }
 
     @media (min-width: $tablet-width) {
