@@ -12,6 +12,66 @@
     }
   }
 
+  &__container {
+    width: 320px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    @media (min-width: $tablet-width) {
+      width: 320px;
+      padding: 0;
+
+      &--tablet-left {
+        padding-left: 20px;
+
+        @media (min-width: $desktop-width) {
+          padding: 0;
+        }
+      }
+
+      &--tablet-right {
+        padding-right: 20px;
+
+        @media (min-width: $desktop-width) {
+          padding: 0;
+        }
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      &--desk-left {
+        width: 310px;
+        padding-left: 10px;
+      }
+
+      &--desk-center {
+        width: 340px;
+        padding: 0 20px;
+      }
+
+      &--desk-right {
+        width: 310px;
+        padding-right: 10px;
+      }
+    }
+
+    &--panorama {
+      @media (min-width: $tablet-width) {
+        width: 660px;
+        padding: 0 20px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 960px;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  &__picture {
+    text-align: center;
+  }
+
   &__img {
     img {
       width: 280px;
@@ -27,7 +87,7 @@
       }
     }
 
-    & > .photo__wide-pic {
+    & > .photo__panorama {
       width: 320px;
       height: 137px;
 
@@ -59,17 +119,17 @@
     }
 
     @media (min-width: $desktop-width) {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 310px 340px 310px;
       grid-template-rows: repeat(2, min-content);
+      gap: 0;
     }
   }
 
   &__item {
     min-width: 280px;
-    background-color: $base-grey;
 
     @media (min-width: $tablet-width) {
-      min-width: 300px;
+      width: 300px;
 
       &:first-of-type {
         width: 100%;
@@ -79,7 +139,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      min-width: 300px;
+      width: 300px;
 
       &:first-of-type {
         width: 100%;
@@ -92,8 +152,9 @@
   &__desc {
     background-color: $base-grey;
     padding-top: 12px;
-    padding-left: 17px;
     padding-bottom: 25px;
+    padding-left: 17px;
+    padding-right: 10px;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
@@ -103,9 +164,11 @@
       padding-top: 20px;
       padding-right: 30px;
       padding-left: 30px;
+      margin-bottom: 30px;
 
       &--panorama {
         min-height: 121px;
+
 
         @media (min-width: $desktop-width) {
           min-height: 96px;

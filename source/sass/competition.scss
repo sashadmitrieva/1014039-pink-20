@@ -2,6 +2,8 @@
   &__promo {
     margin: 0;
     padding-top: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
 
     @include base-size(14px, 400, 30px);
     text-align: center;
@@ -89,6 +91,13 @@
   }
 
   // Стилизация полей
+  &__wrapper {
+    background-color: $base-grey;
+
+    @media (min-width: $tablet-width) {
+      background-color: inherit;
+    }
+  }
 
   &__fieldset {
     padding: 0;
@@ -96,6 +105,8 @@
     border: none;
     padding-top: 35px;
     padding-bottom: 44px;
+    padding-left: 20px;
+    padding-right: 20px;
 
     &--reviews {
       padding-bottom: 0;
@@ -454,6 +465,11 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: min-content min-content;
+
+    &--mobile {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
 
     @media (min-width: $tablet-width) {
       padding-top: 60px;

@@ -35,6 +35,21 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 
+  &--mobile {
+    width: 320px;
+
+    @media (min-width: $tablet-width) {
+      width: 660px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 960px;
+      padding: 0 10px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     width: 660px;
   }
