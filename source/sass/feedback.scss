@@ -1,8 +1,19 @@
 .feedback {
+  padding-top: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 59px;
+  }
+
   &__info {
     @include base-size(24px, 300, 29px);
     text-align: center;
     margin: 0 auto;
+    padding-bottom: 33px;
     max-width: 470px;
 
     @media (min-width: $tablet-width) {
@@ -10,6 +21,8 @@
     }
 
     @media (min-width: $desktop-width) {
+      padding-bottom: 40px;
+
       @include base-size(50px, 300, 68px);
     }
   }
@@ -19,13 +32,16 @@
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
+
+    @media (min-width: $tablet-width) {
+      min-height: 220px;
+    }
   }
 
   &__item {
     margin: 0;
-    width: 310px;
 
     @media (min-width: $desktop-width) {
       &:first-child {
@@ -43,18 +59,46 @@
 
     @include base-size(18px, 700, 25px);
     text-align: center;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 20px;
+    }
   }
 
   &__text {
     margin: 0;
+    margin-bottom: 20px;
 
     @include base-size(24px, 300, 33px);
     text-align: center;
     color: $base-pink;
-    max-width: 250px;
+
+    @media (min-width: $tablet-width) {
+      max-width: 250px;
+      margin: 0 auto;
+    }
   }
 
   &__link {
     color: $base-pink;
+  }
+
+  &__map-container {
+    text-align: center;
+  }
+
+  &__map img {
+    width: 320px;
+    height: 200px;
+
+    @media (min-width: $tablet-width) {
+      width: 660px;
+      height: 374px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 1200px;
+      height: 502px;
+    }
   }
 }

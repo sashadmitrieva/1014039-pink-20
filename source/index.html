@@ -13,7 +13,7 @@
   <header class="page-header page-header--index">
     <div class="page-header__top-cover">
       <div class="page-header__wrapper page-header__wrapper--desktop">
-        <div class="page-header__top container">
+        <div class="page-header__top page-header__top--container">
           <a class="page-header__logo">
             <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип сайта Pink">
           </a>
@@ -106,19 +106,27 @@
     </section>
 
     <section class="reviews container">
-      <h2 class="visually-hidden">Отзывы</h2>
-      <div class="reviews__list">
-        <blockquote class="reviews__item">
-          <cite class="reviews__author">Николай Петров</cite>
-          <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          <span class="reviews__data">25 лет, водитель трамвая</span>
-        </blockquote>
+      <div class="reviews__wrapper">
+        <h2 class="visually-hidden">Отзывы</h2>
+
+        <div class="reviews__list">
+          <blockquote class="reviews__item">
+            <cite class="reviews__author">Николай Петров</cite>
+            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            <span class="reviews__data">25 лет, водитель трамвая</span>
+          </blockquote>
+          <div class="reviews__arrows">
+            <button class="reviews__arrow reviews__arrow--prev" href="#" type="button"></button>
+            <button class="reviews__arrow reviews__arrow--next" href="#" type="button"></button>
+          </div>
+        </div>
+
+        <div class="reviews__toggles slider">
+          <button class="slider__item slider__item--current" type="button" aria-label="Тариф База"></button>
+          <button class="slider__item" type="button" aria-label="Тариф Стандарт"></button>
+          <button class="slider__item" type="button" aria-label="Тариф Анлим"></button>
+        </div>
       </div>
-      <p class="reviews__toggles slider">
-        <button class="slider__toggle slider__toggle--current" type="button">1</button>
-        <button class="slider__toggle" type="button">2</button>
-        <button class="slider__toggle" type="button">3</button>
-      </p>
     </section>
 
     <section class="price">
@@ -126,59 +134,63 @@
         <h2 class="visually-hidden">Цены</h2>
         <table class="price__list">
           <tr class="price__row">
-            <th class="price__item price__item--notmobile"></th>
+            <th class="price__title price__title--notmobile"></th>
             <th class="price__title">База<br><span class="price__cost">1,99 USD</span></th>
             <th class="price__title">Стандарт<br><span class="price__cost">3,99 USD</span></th>
             <th class="price__title">Анлим<br><span class="price__cost">9,99 USD</span></th>
           </tr>
           <tr class="price__row">
-            <td class="price__name price__item--notmobile">Розовый фильтр</td>
-            <td class="price__name price__name--hidden">Розовый фильтр</td>
-            <td class="price__name price__name--hidden">Розовый фильтр</td>
-            <td class="price__name price__name--hidden">Розовый фильтр</td>
+            <td class="price__name price__name--notmobile">Розовый фильтр</td>
+            <td class="price__name price__name--yes"><span class="price__filter">Розовый фильтр</span></td>
+            <td class="price__name price__name--yes"><span class="price__filter">Розовый фильтр</span></td>
+            <td class="price__name price__name--yes"><span class="price__filter">Розовый фильтр</span></td>
           </tr>
           <tr class="price__row">
-            <td class="price__name price__item--notmobile">Смайлики</td>
-            <td class="price__name price__name--hidden">Смайлики</td>
-            <td class="price__name price__name--hidden">Смайлики</td>
-            <td class="price__name price__name--hidden">Смайлики</td>
+            <td class="price__name price__name--notmobile">Смайлики</td>
+            <td class="price__name price__name--no"><span class="price__filter">Смайлики</span></td>
+            <td class="price__name price__name--yes"><span class="price__filter">Смайлики</span></td>
+            <td class="price__name price__name--yes"><span class="price__filter">Смайлики</span></td>
           </tr>
           <tr class="price__row">
-            <td class="price__name price__item--notmobile">Комментарии</td>
-            <td class="price__name price__name--hidden">Комментарии</td>
-            <td class="price__name price__name--hidden">Комментарии</td>
-            <td class="price__name price__name--hidden">Комментарии</td>
+            <td class="price__name price__name--notmobile">Комментарии</td>
+            <td class="price__name price__name--no"><span class="price__filter">Комментарии</span></td>
+            <td class="price__name price__name--no"><span class="price__filter">Комментарии</span></td>
+            <td class="price__name price__name--yes"><span class="price__filter">Комментарии</span></td>
           </tr>
         </table>
 
-        <p class="price__toggles">
-          <button class="price__toggle" type="button">1</button>
-          <button class="price__toggle slider__toggle--current" type="button">2</button>
-          <button class="price__toggle" type="button">3</button>
+        <p class="price__toggles slider">
+          <button class="slider__item" type="button"></button>
+          <button class="slider__item slider__item--current" type="button"></button>
+          <button class="slider__item" type="button"></button>
         </p>
       </div>
     </section>
 
-    <section class="feedback container">
-      <h2 class="visually-hidden">Обратная связь</h2>
-      <p class="feedback__info">
-        Остались вопросы? Свяжитесь с нами!
-      </p>
-      <ul class="feedback__list">
-        <li class="feedback__item">
-          <h3 class="feedback__title">Звоните:</h3>
-          <p class="feedback__text"><a class="feedback__link" href="tel:78125556666">+7(812)555-66-66</a></p>
-        </li>
-        <li class="feedback__item">
-          <h3 class="feedback__title">Пишите:</h3>
-          <p class="feedback__text"><a class="feedback__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-        </li>
-        <li class="feedback__item">
-          <h3 class="feedback__title">Приезжайте в гости:</h3>
-          <p class="feedback__text">ул. Большая Конюшенная, 19/8</p>
-        </li>
-      </ul>
-      <a class="feedback__link-map" href="#"><img src="img/bg-map-mobile@1x.png" alt="Карта местонахождения офиса по адресу Большая Конюшенная, 19/8" width="320" height="200"></a>
+    <section class="feedback">
+      <div class="container">
+        <h2 class="visually-hidden">Обратная связь</h2>
+        <p class="feedback__info">
+          Остались вопросы? Свяжитесь с нами!
+        </p>
+        <ul class="feedback__list">
+          <li class="feedback__item">
+            <h3 class="feedback__title">Звоните:</h3>
+            <p class="feedback__text"><a class="feedback__link" href="tel:78125556666">+7 (812) 555-66-66</a></p>
+          </li>
+          <li class="feedback__item">
+            <h3 class="feedback__title">Пишите:</h3>
+            <p class="feedback__text"><a class="feedback__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+          </li>
+          <li class="feedback__item">
+            <h3 class="feedback__title">Приезжайте в гости:</h3>
+            <p class="feedback__text">ул. Большая Конюшенная, 19/8</p>
+          </li>
+        </ul>
+      </div>
+      <div class="feedback__map-container">
+        <a class="feedback__map" href="#"><img src="img/bg-map-mobile@1x.png" alt="Карта местонахождения офиса по адресу Большая Конюшенная, 19/8" width="320" height="200"></a>
+      </div>
     </section>
   </main>
 

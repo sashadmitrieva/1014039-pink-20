@@ -1,113 +1,539 @@
 .competition {
   &__promo {
+    margin: 0;
+    padding-top: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+
     @include base-size(14px, 400, 30px);
+    text-align: center;
 
     @media (min-width: $tablet-width) {
       font-size: 18px;
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-top: 90px;
+      padding-bottom: 70px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 70px;
+      padding-left: 70px;
     }
   }
 
-  &__name {
-    color: $base-pink;
-    text-transform: uppercase;
-
-    @include base-size(14px, 400, 30px);
-  }
-
-  &__field::placeholder {
-    @include base-size(18px, 400, 30px);
-    color: $base-blue;
-  }
-
-  &__checkboxarea,
-  &__radioarea {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  &__fieldset {
-    padding: 0;
-    margin: 0;
-    border-color: $base-border;
-
-    @media (max-width: $mobile-width) {
-      border: none;
-
-      &--bgc {
-        background-color: $base-grey;
-      }
-    }
-
-    @media (min-width: $tablet-width) {
-      &:first-child {
-        border: none;
-      }
-    }
-  }
-
-  &__input-area {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  &__input-item {
-    display: flex;
-    flex-direction: column;
-
-    @media (min-width: $tablet-width) {
-      flex-direction: row;
-    }
-  }
-
-  &__radiolabel {
-    @include base-size(18px, 400, 30px);
-  }
+  // Стилизация легенд
 
   &__intro {
     @include base-size(14px, 400, 18px);
     color: $base-pink;
     text-transform: uppercase;
     text-align: center;
+    padding-top: 40px;
+    padding-bottom: 5px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 0;
+    }
+
+    &--app,
+    &--achievements {
+      background-color: $base-grey;
+
+      @media (min-width: $tablet-width) {
+        background-color: inherit;
+      }
+    }
+
+    &--achievements {
+      padding-left: 20px;
+      padding-right: 20px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: -8px;
+      }
+    }
+
+    &--reviews {
+      margin-bottom: -25px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: -2px;
+      }
+    }
+
+    &--app {
+      margin-bottom: -2px;
+
+      @media (min-width: $tablet-width) {
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    &--contacts {
+      display: none;
+
+      @media (min-width: $tablet-width) {
+        display: block;
+      }
+    }
   }
 
-  &__emotionarea {
-    @include base-size(18px, 400, 30px);
-    font-family: "Open Sans", "Arial", sans-serif;
-    color: $base-blue;
+  // "Пожалуйста, заполните форму ниже:"
+
+  &__fill {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: inline;
+    }
   }
 
-  &__label {
-    @include base-size(18px, 400, 30px);
-    color: $base-blue;
+  // Стилизация полей
+  &__wrapper {
+    background-color: $base-grey;
+
+    @media (min-width: $tablet-width) {
+      background-color: inherit;
+    }
   }
 
-  &__btn-area {
+  &__fieldset {
+    padding: 0;
+    margin: 0;
+    border: none;
+    padding-top: 35px;
+    padding-bottom: 44px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &--reviews {
+      padding-bottom: 0;
+    }
+
+    &--app,
+    &--achievements {
+      background-color: $base-grey;
+
+      @media (min-width: $tablet-width) {
+        background-color: inherit;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      border: 2px solid $base-border;
+      padding-top: 45px;
+      padding-left: 60px;
+      padding-right: 60px;
+
+      &--name {
+        border: none;
+        padding: 0;
+      }
+
+      &--app {
+        padding-bottom: 60px;
+      }
+
+      &--contacts {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      &--app {
+        padding-left: 43px;
+      }
+
+      &--contacts {
+        padding-top: 25px;
+        padding-bottom: 15px;
+      }
+
+      &--achievements {
+        padding-bottom: 15px;
+      }
+
+      &--reviews {
+        padding-top: 30px;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  //  Микросетки текстовых полей
+
+  &__input-area {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &--contacts {
+      @media (min-width: $desktop-width) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content;
+        grid-column-gap: 74px;
+      }
+    }
+  }
+
+  &__input-item {
     display: flex;
     flex-direction: column;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     @media (min-width: $tablet-width) {
       flex-direction: row;
-      justify-content: space-between;
+      align-items: baseline;
+
+      &--name {
+        margin-bottom: 50px;
+      }
+
+      &--contacts {
+        margin-bottom: 25px;
+      }
+    }
+
+    &--contacts {
+      position: relative;
+
+      @media (min-width: $tablet-width) {
+        flex-direction: column-reverse;
+      }
+
+      @media (min-width: $desktop-width) {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Стилизация полей ввода личных данных
+
+  &__input-label {
+    color: $base-pink;
+    text-transform: uppercase;
+    padding-left: 23px;
+    padding-bottom: 4px;
+    margin-right: 18px;
+
+    @include base-size(14px, 400, 30px);
+
+    @media (min-width: $tablet-width) {
+      padding-left: 0;
+
+      &--contacts {
+        padding-top: 8px;
+        padding-left: 20px;
+      }
+    }
+  }
+
+  &__input-field {
+    border: 2px solid $base-border;
+    border-radius: 3px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-grow: 1;
+    width: 100%;
+
+    &:hover {
+      border-color: $base-blue;
+    }
+
+    &:active {
+      border-color: $base-pink;
+    }
+  }
+
+  // Стилизация поля ввода номера телефона и email
+
+  &__icon {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      display: block;
+      background-color: $base-border;
+      top: 2px;
+      right: 2px;
+      width: 62px;
+      height: 62px;
+      border-radius: 2px;
+
+      & > svg {
+        padding: 20px;
+      }
+    }
+  }
+
+  // Стилизация текста внутри инпутов и placeholder
+
+  input[type~="text"],
+  input[type~="email"] {
+    font-size: 14px;
+  }
+
+  &__input-field::placeholder,
+  &__input-phone::placeholder,
+  &__input-email::placeholder {
+    @include base-size(18px, 400, 30px);
+    color: $base-blue;
+    font-family: "Open Sans", "Arial", sans-serif;
+  }
+
+  // Микросетки чекбоксов
+
+  &__checkbox-area {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: 260px 250px 210px;
+      grid-template-rows: min-content min-content;
+      grid-column-gap: 50px;
+    }
+  }
+
+  &__checkbox-item {
+    padding-left: 59px;
+    margin-bottom: 52px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-of-type(2) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+
+    &:nth-of-type(5) {
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;
+    }
+  }
+
+  // Стилизация чекбоксов
+
+  &__checkbox-field {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    & + label::before {
+      position: absolute;
+      content: "";
+      top: -6px;
+      left: -58px;
+      width: 38px;
+      height: 38px;
+      border: 2px solid $base-border;
+      border-radius: 2px;
+      background-color: $base-white;
+    }
+
+    & + label:hover::before {
+      border-color: $base-blue;
+    }
+
+    & + label:active::before {
+      border-color: $base-pink;
+    }
+
+    &:checked + label::after {
+      position: absolute;
+      content: "";
+      top: 4px;
+      left: -50px;
+      width: 22px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='21.698px' height='16.09px' viewBox='-82.357 4.875 21.698 16.09' enable-background='new -82.357 4.875 21.698 16.09' xml:space='preserve'%3E%3Cpath fill='%23d22856' d='M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z'/%3E%3C/svg%3E%0A");
+    }
+  }
+
+  &__checkbox-label {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+    @include base-size(18px, 400, 30px);
+    color: $base-blue;
+  }
+
+  // Стилизация радиокнопок
+
+  &__radio-area {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__radio-item {
+    padding-left: 70px;
+    margin-bottom: 45px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-left: 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 80px;
+    }
+  }
+
+  &__radio-input {
+    & + label::before {
+      position: absolute;
+      content: "";
+      top: -7px;
+      left: -68px;
+      width: 39px;
+      height: 39px;
+      border: 2px solid $base-border;
+      border-radius: 50%;
+    }
+
+    & + label:hover::before {
+      border-color: $base-blue;
+    }
+
+    & + label:active::before {
+      border-color: $base-pink;
+    }
+
+    &:checked + label::after {
+      position: absolute;
+      content: "";
+      top: 5px;
+      left: -56px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $base-pink;
+    }
+  }
+
+  &__radio-label {
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+
+    @include base-size(18px, 400, 30px);
+  }
+
+  // Стилизация поля textarea
+
+  &__text-field {
+    @include base-size(18px, 400, 30px);
+    font-family: "Open Sans", "Arial", sans-serif;
+    color: $base-blue;
+    border: 2px solid $base-border;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    margin-bottom: 42px;
+    min-height: 197px;
+
+    @media (min-width: $desktop-width) {
+      min-height: 124px;
+    }
+  }
+
+  // Стилизация кнопок
+
+  &__btn-area {
+    padding-top: 44px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content;
+
+    &--mobile {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 60px;
+      padding-bottom: 35px;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 20px;
+      grid-template-rows: min-content;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: 300px 1fr 330px;
     }
   }
 
   &__btn {
+    display: inline-block;
+    padding-top: 16px;
+    padding-bottom: 17px;
     background-color: $base-green;
     border: none;
-    border-radius: 1px;
+    border-radius: 3px;
     color: $base-white;
     font-family: "Open Sans", "Arial", sans-serif;
     text-transform: uppercase;
 
     @include base-size(18px, 700, 30px);
+
+    &:hover {
+      background-color: $special-green;
+    }
+
+    &:disabled {
+      background-color: $base-border;
+    }
+
+    &:active > span {
+      opacity: 0.3;
+    }
   }
 
   &__legend {
     @include base-size(14px, 400, 30px);
     text-transform: uppercase;
     text-align: center;
+    padding-top: 35px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 0;
+      text-align: right;
+      align-self: center;
+      justify-self: end;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: 3 / 4;
+    }
+  }
+
+  &__required {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: inline-block;
+    }
   }
 
   &__star {
