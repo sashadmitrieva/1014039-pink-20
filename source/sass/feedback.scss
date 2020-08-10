@@ -82,4 +82,19 @@
   &__link {
     color: $base-pink;
   }
+
+  &__map img {
+    width: 320px;
+    height: 200px;
+
+    @media (min-width: $tablet-width) {
+      width: 660px;
+      height: 374px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 1200px;
+      height: 502px;
+    }
+  }
 }
