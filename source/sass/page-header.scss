@@ -12,7 +12,11 @@
     min-height: 394px;
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-position: top;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
   }
 
   &--index {
@@ -20,7 +24,13 @@
       min-height: 853px;
       background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
       background-repeat: no-repeat;
-      background-position: center bottom, center;
+      background-position: 58% bottom, center;
+      background-size: auto, cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/iphone-hand-desktop@2x.png"), url("../img/bg-back-desktop@2x.jpg");
+        background-size: contain, cover;
+      }
     }
   }
 
@@ -58,35 +68,19 @@
     @media (min-width: $tablet-width) {
       height: 110px;
     }
-  }
 
-  &__container {
-    display: flex;
+    img {
+      width: 74px;
+      height: 23px;
 
-    @media (min-width: $mobile-width) and (max-width: $tablet-width) {
-      background-image: url("../img/bg-back-mobile@1x.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      min-height: 171px;
-    }
-
-    @media (width: $tablet-width) and (max-width: $desktop-width) {
-      min-height: 330px;
-      background-image: url("../img/bg-back-tablet@1x.jpg");
-      background-repeat: no-repeat;
-    }
-
-    &--index {
       @media (min-width: $tablet-width) {
-        height: 619px;
-        background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
-        background-repeat: no-repeat;
-        background-position: center bottom;
+        width: 145px;
+        height: auto;
       }
 
       @media (min-width: $desktop-width) {
-        background-image: none;
+        width: 147px;
+        height: auto;
       }
     }
   }
@@ -95,12 +89,15 @@
     margin: 0 auto;
 
     &--index {
-      @media (min-width: $mobile-width) {
-        height: 396px;
-        background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
-        background-repeat: no-repeat;
-        background-position: 0 115px, center;
-        background-size: auto, cover;
+      height: 396px;
+      background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: left bottom, center;
+      background-size: auto, cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/iphone-hand-mobile@2x.png"), url("../img/bg-back-mobile@2x.jpg");
+        background-size: 258px auto, cover;
       }
 
       @media (min-width: $tablet-width) {
@@ -110,6 +107,52 @@
 
       @media (min-width: $desktop-width) {
         height: 340px;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 171px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-back-mobile@2x.jpg");
+    }
+
+    @media (min-width: $tablet-width) {
+      min-height: 330px;
+      background-image: url("../img/bg-back-tablet@1x.jpg");
+      background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/bg-back-tablet@2x.jpg");
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      background: none;
+    }
+
+    &--index {
+      @media (min-width: $tablet-width) {
+        height: 619px;
+        background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
+        background-repeat: no-repeat;
+        background-position: center bottom, center;
+        background-size: auto, cover;
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/iphone-hand-tablet@2x.png"), url("../img/bg-back-tablet@2x.jpg");
+          background-size: contain, cover;
+        }
+      }
+
+      @media (min-width: $desktop-width) {
+        background-image: none;
       }
     }
   }
@@ -133,6 +176,8 @@
 
     @media (min-width: $desktop-width) {
       padding-top: 60px;
+      padding-left: 60px;
+      padding-right: 60px;
     }
 
     &--main {

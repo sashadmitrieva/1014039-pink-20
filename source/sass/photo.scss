@@ -87,7 +87,7 @@
       }
     }
 
-    & > .photo__panorama {
+    & .photo__panorama {
       width: 320px;
       height: 137px;
 
@@ -102,6 +102,7 @@
       }
     }
   }
+
 
   &__list {
     list-style: none;

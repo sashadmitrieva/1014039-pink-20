@@ -15,7 +15,11 @@
       <div class="page-header__wrapper page-header__wrapper--desktop">
         <div class="page-header__top page-header__top--container">
           <a class="page-header__logo">
-            <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип сайта Pink">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+              <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип сайта Pink">
+            </picture>
           </a>
         </div>
         <nav class="main-nav">
@@ -189,7 +193,9 @@
         </ul>
       </div>
       <div class="feedback__map-container">
-        <a class="feedback__map" href="#"><img src="img/bg-map-mobile@1x.png" alt="Карта местонахождения офиса по адресу Большая Конюшенная, 19/8" width="320" height="200"></a>
+        <a class="feedback__map" href="#">
+          <img src="img/bg-map-mobile@1x.png" alt="Карта местонахождения офиса по адресу Большая Конюшенная, 19/8" width="320" height="200">
+        </a>
       </div>
     </section>
   </main>
@@ -197,7 +203,10 @@
   <div class="container">
     <footer class="page-footer">
       <a class="page-footer__logo">
-        <img src="img/logo-pink-blue-mobile.svg" width="145" height="40" alt="Логотип сайта Pink">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img src="img/logo-pink-blue-mobile.svg" width="145" height="40" alt="Логотип сайта Pink">
+        </picture>
       </a>
       <ul class="page-footer__social social">
         <li class="social__item">
