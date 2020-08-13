@@ -34,10 +34,6 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-
-    @media (min-width: $tablet-width) {
-      min-height: 220px;
-    }
   }
 
   &__item {
@@ -84,7 +80,64 @@
   }
 
   &__map-container {
-    text-align: center;
+    position: relative;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 200px;
+    background-image: url("../img/bg-map-mobile@1x.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-map-mobile@2x.jpg");
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+      background-image: url("../img/bg-map-tablet@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/bg-map-tablet@2x.jpg");
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 15px;
+      background-image: url("../img/bg-map-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/bg-map-desktop@2x.jpg");
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -1px;
+      width: 100%;
+      height: 123px;
+      background-image: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='595.28px' height='61.905px' enable-background='new 0 0 595.28 61.905' xml:space='preserve'%3E%3Cpolygon fill='%23ffffff' points='297.64,61.905 0,0 595.28,0 '/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: top center;
+    }
+
+
+    @media (min-width: $tablet-width) {
+      height: 374px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 502px;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 100%;
   }
 
   &__map img {
