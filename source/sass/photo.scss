@@ -1,4 +1,17 @@
 .photo {
+  &__wrapper {
+    width: 320px;
+    margin: 0 auto;
+
+    @media (min-width: $tablet-width) {
+      width: 660px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 960px;
+    }
+  }
+
   &__intro {
     margin: 0;
     padding-top: 46px;
@@ -114,7 +127,7 @@
     grid-row-gap: 20px;
 
     @media (min-width: $tablet-width) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 320px 320px;
       grid-template-rows: repeat(3, min-content);
       gap: 20px;
     }
