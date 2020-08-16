@@ -38,14 +38,27 @@
     }
   }
 
-  .social__item {
+  &__social-item {
     width: 52px;
     height: 52px;
-    border: 3px solid lighten($base-blue, 70%);
+    border: 3px solid $special-grey;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:hover {
+      border-color: $base-blue;
+    }
+
+    &:active {
+      border-color: $light-grey;
+      opacity: 0.3;
+    }
+  }
+
+  &__social-link {
+    fill: $base-pink;
   }
 
   &__copyright {
@@ -57,6 +70,15 @@
     &--icon {
       margin-left: 11px;
       vertical-align: middle;
+      fill: $base-pink;
+
+      &:hover {
+        fill: $base-blue;
+      }
+
+      &:active {
+        fill: $base-toggle;
+      }
     }
 
     @media (min-width: $desktop-width) {
