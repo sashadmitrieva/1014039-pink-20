@@ -65,6 +65,21 @@
     height: 69px;
     padding-top: 24px;
 
+    &:hover .logo__letters > path,
+    &:hover .logo__glasses--tablet,
+    &:hover .logo__glasses--desktop > path {
+      fill: $base-pink;
+    }
+
+    &:active .page-header__logo-pink {
+      opacity: 0.3;
+
+      .logo__letters > path,
+      .logo__glasses > path {
+        fill: $base-white;
+      }
+    }
+
     @media (min-width: $tablet-width) {
       height: 110px;
     }
@@ -232,6 +247,16 @@
     @include base-btn($base-white, 29px);
     background-color: $base-blue;
     color: $base-white;
+
+    &:hover {
+      background-color: $base-white;
+      color: $base-pink;
+    }
+
+    &:active {
+      background-color: $base-white;
+      color: $special-pink;
+    }
 
     @media (min-width: $tablet-width) {
       background-color: transparent;
