@@ -100,6 +100,32 @@
       }
     }
 
+    &--panorama {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "Панорама дня";
+        right: 20px;
+        padding-top: 7px;
+
+        @include base-size(12px, 700, 24px);
+        text-transform: uppercase;
+        color: $base-white;
+        width: 140px;
+        height: 36px;
+        background-color: $base-pink;
+
+        @media (min-width: $tablet-width) {
+          top: -435px;
+        }
+
+        @media (min-width: $desktop-width) {
+          right: 10px;
+        }
+      }
+    }
+
     & .photo__panorama {
       width: 320px;
       height: 137px;
