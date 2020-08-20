@@ -15,6 +15,14 @@
     margin-right: 13px;
     cursor: pointer;
 
+    &:hover {
+      background-color: $dark-grey;
+    }
+
+    &:active {
+      background-color: $special-grey;
+    }
+
     &:last-child {
       margin-right: 0;
     }

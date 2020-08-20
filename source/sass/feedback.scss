@@ -77,6 +77,17 @@
 
   &__link {
     color: $base-pink;
+
+    &:hover {
+      color: $base-blue;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $base-blue;
+      text-decoration: none;
+      opacity: 0.3;
+    }
   }
 
   &__map-container {

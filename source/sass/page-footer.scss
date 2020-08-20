@@ -18,6 +18,20 @@
     padding-bottom: 75px;
   }
 
+  &__logo {
+    &:hover .logo-footer__letters > path {
+      fill: $base-pink;
+    }
+
+    &:active {
+      opacity: 0.3;
+
+      .logo-footer__letters > path {
+        fill: $base-blue;
+      }
+    }
+  }
+
   &__logo img {
     width: 145px;
     height: 40px;

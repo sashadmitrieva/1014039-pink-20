@@ -65,6 +65,30 @@
     height: 69px;
     padding-top: 24px;
 
+    &:hover .page-header__logo-mobile > path {
+      fill: $base-pink;
+    }
+
+    &:active .page-header__logo-mobile > path {
+      fill: $base-white;
+      opacity: 0.3;
+    }
+
+    &:hover .logo__letters > path,
+    &:hover .logo__glasses--tablet,
+    &:hover .logo__glasses--desktop > path {
+      fill: $base-pink;
+    }
+
+    &:active .page-header__logo-pink {
+      opacity: 0.3;
+
+      .logo__letters > path,
+      .logo__glasses > path {
+        fill: $base-white;
+      }
+    }
+
     @media (min-width: $tablet-width) {
       height: 110px;
     }
@@ -82,6 +106,20 @@
         width: 147px;
         height: auto;
       }
+    }
+  }
+
+  &__logo-mobile {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__logo-pink {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
     }
   }
 
@@ -232,6 +270,16 @@
     @include base-btn($base-white, 29px);
     background-color: $base-blue;
     color: $base-white;
+
+    &:hover {
+      background-color: $base-white;
+      color: $base-pink;
+    }
+
+    &:active {
+      background-color: $base-white;
+      color: $special-pink;
+    }
 
     @media (min-width: $tablet-width) {
       background-color: transparent;
