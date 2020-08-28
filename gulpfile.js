@@ -13,6 +13,7 @@ const svgo = require ("gulp-svgo");
 const webp = require ("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
+const htmlmin = require("gulp-htmlmin");
 
 // Images
 
@@ -52,6 +53,7 @@ exports.sprite = sprite;
 
 const html = () => {
   return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true}))
     .pipe(gulp.dest("build"))
     .pipe(sync.stream());
 }
@@ -93,17 +95,6 @@ const server = (done) => {
 
 exports.server = server;
 
-// Watcher
-
-const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
-}
-
-exports.default = gulp.series(
-  styles, server, watcher
-);
-
 // Clean
 
 const clean = () => {
@@ -141,3 +132,14 @@ const build = gulp.series (
 );
 
 exports.build = build;
+
+// Watcher
+
+const watcher = () => {
+  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/*.html").on("change", sync.reload);
+}
+
+exports.default = gulp.series(
+  build, server, watcher
+);
