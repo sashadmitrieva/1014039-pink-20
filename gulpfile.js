@@ -14,6 +14,7 @@ const webp = require ("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const htmlmin = require("gulp-htmlmin");
+const uglify = require("gulp-uglify");
 
 // Images
 
@@ -59,6 +60,17 @@ const html = () => {
 }
 
 exports.html = html;
+
+// JS
+
+const scripts = () => {
+  return gulp.src("source/js/*.js")
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+
+exports.scripts = scripts;
 
 // Styles
 
@@ -128,6 +140,7 @@ const build = gulp.series (
   images,
   addWebp,
   sprite,
+  scripts,
   html
 );
 
