@@ -5,6 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
+  <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -140,11 +143,11 @@
             <ul class="competition__input-area competition__input-area--name">
               <li class="competition__input-item competition__input-item--name">
                 <label class="competition__input-label" for="lastname">Фамилия:</label>
-                <input class="competition__input-field" type="text" name="lastname" id="lastname" placeholder="Укажите фамилию *" required>
+                <input class="competition__input-field competition__input-field--required" type="text" name="lastname" id="lastname" placeholder="Укажите фамилию *">
               </li>
               <li class="competition__input-item competition__input-item--name">
                 <label class="competition__input-label" for="firstname">Имя:</label>
-                <input class="competition__input-field" type="text" name="firstname" id="firstname" placeholder="Введите ваше имя *" required>
+                <input class="competition__input-field competition__input-field--required" type="text" name="firstname" id="firstname" placeholder="Введите ваше имя *">
               </li>
               <li class="competition__input-item competition__input-item--name">
                 <label class="competition__input-label" for="middlename">Отчество:</label>
@@ -199,7 +202,7 @@
               </li>
               <li class="competition__input-item competition__input-item--contacts">
                 <label class="competition__input-label competition__input-label--contacts" for="email">Адрес почты</label>
-                <input class="competition__input-field competition__input-field--contacts" type="email" name="email" id="email" placeholder="Введите почту *" required>
+                <input class="competition__input-field competition__input-field--required  competition__input-field--contacts" type="email" name="email" id="email" placeholder="Введите почту *">
                 <span class="competition__icon">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="60px" viewBox="0 0 17.988 13.966" enable-background="new 0 0 17.988 13.966"
                     xml:space="preserve">
@@ -351,6 +354,8 @@
       <button class="popup__close-btn" type="button">Закрыть окно</button>
     </div>
   </div>
+
+  <script src="js/script.js"></script>
 
 </body>
 
