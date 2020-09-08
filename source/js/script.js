@@ -3,7 +3,10 @@ var competitionbtn = document.querySelector(".competition__btn");
 
 var request = document.querySelector(".popup__request");
 var error = document.querySelector(".popup__error");
-var close = document.querySelector(".popup__close-btn");
+
+var close = document.querySelectorAll(".popup__close-btn");
+var errorclose = document.getElementById("close-error");
+var requestclose = document.getElementById("close-request");
 
 function validate () {
   var fields = form.querySelectorAll(".competition__input-field--required"); // Находим все элементы обязательные к заполнению
@@ -12,7 +15,6 @@ function validate () {
     if (fields[i].value == "") {
       fields[i].style.borderColor = "red";
       error.classList.add("popup__show");
-      evt.preventDefault();
     } else {
       request.classList.add("popup__show"); // Если все обязательные поля заполнены показать модальное окно с успешной отправкой формы
       return true; // Возвращаем true
@@ -23,15 +25,14 @@ function validate () {
 competitionbtn.addEventListener("click", function(evt) {
   evt.preventDefault();
   validate();
-})
+});
 
-close.addEventListener("click", function(evt) {
+requestclose.addEventListener("click", function(evt) {
   evt.preventDefault();
   request.classList.remove("popup__show");
-})
+});
 
-close.addEventListener("click", function(evt) {
+errorclose.addEventListener("click", function(evt) {
   evt.preventDefault();
   error.classList.remove("popup__show");
-
-})
+});
