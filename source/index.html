@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="description" content="Pink - мобильное приложение для раскрашивания серых будней в розовый цвет">
+  <meta name="keywords" content="мобильное приложение, фотографии, конкурс">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
@@ -35,21 +37,6 @@
         <path id="path5062" fill="#2DABE2" d="M20.873,41.992H0V22.04h20.873V41.992z" />
         <path id="path5064" fill="#F9BC15" d="M43.922,41.992H23.049V22.04h20.873V41.992z" />
       </g>
-    </symbol>
-    <symbol viewBox="0 0 17.5 14.663" id="icon-twitter">
-      <g>
-        <g>
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z" />
-        </g>
-      </g>
-    </symbol>
-    <symbol viewBox="0 0 8.673 18.944" id="icon-facebook">
-      <path
-        d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z" />
-    </symbol>
-    <symbol viewBox="0 0 14.64 13.96" id="icon-youtube">
-      <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z" />
     </symbol>
     <symbol viewBox="0 0 26.943 34.09" id="icon-htmlacademy">
       <path
@@ -149,7 +136,7 @@
         </nav>
       </div>
     </div>
-    <div class="page-header__container--index">
+    <div class="page-header__container page-header__container--mobile page-header__container--index">
       <div class="page-header__middle page-header__middle--index">
         <div class="container">
           <p class="page-header__slogan page-header__slogan--main">Взгляните на жизнь иначе!</p>
@@ -157,25 +144,25 @@
       </div>
       <div class="container">
         <div class="page-header__bottom ">
-          <button class="page-header__button" type="button">Скачать приложение</button>
+          <a class="page-header__button" href="https://www.apple.com/ru/ios/app-store/">Скачать приложение</a>
           <ul class="page-header__list">
             <li class="page-header__item">
-              <a class="page-header__icon" href="#">
+              <a class="page-header__icon" href="https://www.apple.com/ru/ios/app-store/" aria-label="Сайт AppStore">
                 <svg class="page-header__icon-apple" width="47" height="56">
                   <use xlink:href="#icon-apple"></use>
                 </svg>
               </a>
             </li>
             <li class="page-header__item">
-              <a href="#">
+              <a href="https://play.google.com/store" aria-label="Сайт Google Play">
                 <svg class="page-header__icon-android" width="43" height="47">
                   <use xlink:href="#icon-android"></use>
                 </svg>
               </a>
             </li>
             <li class="page-header__item">
-              <a href="#">
-                <svg class="page-header__icon-microsoft" width="41" height="44">
+              <a href="https://www.microsoft.com/ru-ru/store/apps/windows" aria-label="Сайт Windows Store">
+                <svg class="page-header__icon-microsoft" width="44" height="41">
                   <use xlink:href="#icon-microsoft"></use>
                 </svg>
               </a>
@@ -205,11 +192,11 @@
             </li>
             <li class="advantages__item">
               <h3 class="advantages__title">Меняет мир вокруг</h3>
-              <p class="advantages__desc">Сделайте снимок и<br> украсьте его смайликом <br>или текстовой подписью, <br>чтобы усилить эффект</p>
+              <p class="advantages__desc">Сделайте снимок и украсьте&nbsp;его смайликом или&nbsp;текстовой подписью, чтобы усилить&nbsp;эффект</p>
             </li>
             <li class="advantages__item">
               <h3 class="advantages__title">Заводит новых друзей</h3>
-              <p class="advantages__desc">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями<br> и заводите новых</p>
+              <p class="advantages__desc">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и&nbsp;заводите новых</p>
             </li>
           </ul>
         </div>
@@ -220,8 +207,8 @@
     <section class="research">
       <div class="container">
         <div class="research__column">
-          <h2 class="research__title">Эффект <br>на 24 часа!</h2>
-          <p class="research__text">Британские ученые провели исследования <br>и доказали, что положительный эффект <br>от использования приложения длится целые сутки!</p>
+          <h2 class="research__title">Эффект&nbsp;<br>на 24 часа!</h2>
+          <p class="research__text">Британские ученые провели исследования и&nbsp;доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится<br> целые сутки!</p>
           <a class="research__link" href="#">Узнать больше об исследовании</a>
         </div>
       </div>
@@ -238,8 +225,8 @@
             <span class="reviews__data">25 лет, водитель трамвая</span>
           </blockquote>
           <div class="reviews__arrows">
-            <button class="reviews__arrow reviews__arrow--prev" href="#" type="button"></button>
-            <button class="reviews__arrow reviews__arrow--next" href="#" type="button"></button>
+            <button class="reviews__arrow reviews__arrow--prev" type="button"></button>
+            <button class="reviews__arrow reviews__arrow--next" type="button"></button>
           </div>
         </div>
 
@@ -311,9 +298,9 @@
         </ul>
       </div>
       <div class="feedback__map-container">
-        <iframe class="feedback__map"
+        <iframe class="feedback__map" title="Местонахождение офиса по адресу ул. Большая Конюшенная, 19/8"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.22279810123!2d30.3250590554193!3d59.93859018433537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1597326169147!5m2!1sru!2sru"
-          frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
     </section>
   </main>
@@ -350,7 +337,7 @@
           <path class="logo-footer__topstar" fill="#D22856" d="M98.498,9.875c-2.002,0-3.623-1.623-3.623-3.624c0,2.001-1.623,3.624-3.625,3.624 c2.002,0,3.625,1.623,3.625,3.624C94.875,11.498,96.496,9.875,98.498,9.875z" />
           <path class="logo-footer__glasses logo-footer__glasses__mobile" fill="#D22856"
             d="M60.462,28.016c-0.002-0.009-5.175-21.365-5.175-21.365C54.926,4.303,52.694,0,46.688,0 c-0.829,0-1.5,0.671-1.5,1.5s0.671,1.5,1.5,1.5c4.856,0,5.575,3.729,5.639,4.143l4.767,19.701h-2.073 c-0.742-5.927-5.802-10.531-11.927-10.531s-11.186,4.604-11.927,10.531h-1.82c-0.741-5.927-5.802-10.531-11.927-10.531 S6.235,20.917,5.493,26.844H3.42L8.187,7.143C8.25,6.729,8.97,3,13.826,3c0.829,0,1.5-0.671,1.5-1.5S14.655,0,13.826,0 C7.82,0,5.588,4.303,5.227,6.651c0,0-5.173,21.356-5.175,21.365c-0.266,1.109,0.531,1.826,1.426,1.826 c0.012,0,0.023,0.004,0.036,0.004h3.982c0.741,5.926,5.802,10.53,11.927,10.53s11.185-4.604,11.927-10.53h1.814 c0.742,5.926,5.802,10.53,11.927,10.53s11.186-4.604,11.927-10.53H59c0.012,0,0.023-0.004,0.036-0.004 C59.931,29.842,60.728,29.125,60.462,28.016z M26.315,29.844c-0.715,4.272-4.421,7.531-8.896,7.531s-8.18-3.259-8.896-7.531 c-0.082-0.488-0.135-0.988-0.135-1.5s0.053-1.011,0.135-1.5c0.715-4.271,4.421-7.531,8.896-7.531s8.18,3.26,8.896,7.531 c0.082,0.489,0.135,0.988,0.135,1.5S26.397,29.355,26.315,29.844z M51.99,29.844c-0.716,4.272-4.421,7.531-8.896,7.531 c-4.475,0-8.181-3.259-8.896-7.531c-0.082-0.488-0.135-0.988-0.135-1.5s0.053-1.011,0.135-1.5c0.716-4.271,4.421-7.531,8.896-7.531 c4.475,0,8.181,3.26,8.896,7.531c0.082,0.489,0.135,0.988,0.135,1.5S52.072,29.355,51.99,29.844z" />
-          <g class="logo-footer__glasses logo__footer__glasses--desktop">
+          <g class="logo-footer__glasses logo-footer__glasses--desktop">
             <path fill="#D22856"
               d="M43.094,19.313c0.246,0,0.489,0.014,0.73,0.033c-0.437-0.728-1.227-1.221-2.136-1.221 c-0.877,0-1.614-0.568-1.884-1.354c-0.727,0.208-1.425,0.482-2.089,0.816c0.062,0.017,0.122,0.038,0.188,0.038c1.104,0,2,0.896,2,2 c0,0.096-0.015,0.188-0.028,0.281C40.875,19.524,41.959,19.313,43.094,19.313z" />
             <path fill="#D22856"
@@ -365,30 +352,30 @@
       </a>
       <ul class="page-footer__social">
         <li class="page-footer__social-item">
-          <a class="page-footer__social-link" href="#">
+          <a class="page-footer__social-link" href="#" aria-label="Twitter">
             <svg width="18" height="14">
-              <use xlink:href="#icon-twitter"></use>
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
             </svg>
           </a>
         </li>
         <li class="page-footer__social-item">
-          <a class="page-footer__social-link" href="#">
+          <a class="page-footer__social-link" href="#" aria-label="Facebook">
             <svg width="9" height="18">
-              <use xlink:href="#icon-facebook"></use>
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
             </svg>
           </a>
         </li>
         <li class="page-footer__social-item">
-          <a class="page-footer__social-link" href="#">
+          <a class="page-footer__social-link" href="#" aria-label="Youtube">
             <svg width="15" height="13">
-              <use xlink:href="#icon-youtube"></use>
+              <use xlink:href="img/sprite.svg#icon-youtube"></use>
             </svg>
           </a>
         </li>
       </ul>
       <p class="page-footer__copyright">
         Разработано
-        <a class="page-footer__copyright--icon" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="page-footer__copyright-icon" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Лендинг HTML Academy">
           <svg width="27" height="34">
             <use xlink:href="#icon-htmlacademy"></use>
           </svg>
