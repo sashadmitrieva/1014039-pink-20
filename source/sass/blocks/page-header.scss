@@ -24,7 +24,7 @@
       min-height: 853px;
       background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
       background-repeat: no-repeat;
-      background-position: 26px bottom, center;
+      background-position: calc(50% + 72px) bottom, center;
       background-size: auto, cover;
 
       @media (min-resolution: 2dppx) {
