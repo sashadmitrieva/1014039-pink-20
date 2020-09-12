@@ -51,7 +51,7 @@
       <div class="page-header__wrapper page-header__wrapper--desktop">
         <div class="page-header__top page-header__top--container">
           <a class="page-header__logo logo">
-            <svg class="page-header__logo-mobile" width="74px" height="23px" viewBox="0 0 74.426 22.859">
+            <svg class="page-header__logo-mobile" width="74" height="23" viewBox="0 0 74 23">
               <path fill="#FFFFFF"
                 d="M0,1.449c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.147v0.064 c0,4.861-4.057,7.373-8.854,7.373H2.544v6.825c0,0.708-0.58,1.288-1.288,1.288C0.58,22.859,0,22.279,0,21.571V1.449z M8.114,12.428 c3.734,0,6.182-1.996,6.182-4.958V7.405c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917H8.114z" />
               <path fill="#FFFFFF" d="M21.729,1.288C21.729,0.58,22.308,0,22.983,0c0.709,0,1.288,0.58,1.288,1.288v20.283 c0,0.708-0.579,1.288-1.288,1.288c-0.676,0-1.255-0.58-1.255-1.288V1.288z" />
@@ -61,7 +61,7 @@
                 d="M56.3,1.288C56.3,0.58,56.879,0,57.556,0c0.708,0,1.287,0.58,1.287,1.288v12.331L71.689,0.451 C71.979,0.193,72.269,0,72.688,0c0.676,0,1.224,0.612,1.224,1.256c0,0.354-0.161,0.644-0.419,0.901l-7.984,7.92l8.564,10.561 c0.225,0.29,0.354,0.547,0.354,0.934c0,0.676-0.579,1.288-1.287,1.288c-0.483,0-0.806-0.258-1.03-0.58l-8.403-10.463l-4.862,4.861 v4.894c0,0.708-0.579,1.288-1.287,1.288c-0.677,0-1.256-0.58-1.256-1.288V1.288z" />
             </svg>
 
-            <svg class="page-header__logo-pink" width="146.3px" height="40.375px" viewBox="0 0 146.3 40.375" role="img" aria-label="Логотип сайта Pink">
+            <svg class="page-header__logo-pink" width="146" height="40" viewBox="0 0 146 40" role="img" aria-label="Логотип сайта Pink">
               <style>
                 @media (min-width: 660px) {
 
@@ -116,8 +116,9 @@
           </a>
         </div>
         <nav class="main-nav">
-          <button class="main-nav__toggle visually-hidden" type="button">
-            <span class="visually-hidden">Открыть меню</span>
+          <!-- При нажатии на элемент с классом main-nav__toggle ему добавляется класс main-nav__toggle--active и иконка превращается в крестик, при повторном клике - класс убирается, кнопка возвращается в исходное состояние -->
+          <button class="main-nav__toggle main-nav__toggle--active visually-hidden" type="button" aria-label="Открыть меню">
+            <span></span>
           </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
@@ -196,7 +197,7 @@
             </li>
             <li class="advantages__item">
               <h3 class="advantages__title">Заводит новых друзей</h3>
-              <p class="advantages__desc">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и&nbsp;заводите новых</p>
+              <p class="advantages__desc">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями&nbsp;и заводите новых</p>
             </li>
           </ul>
         </div>
@@ -225,15 +226,15 @@
             <span class="reviews__data">25 лет, водитель трамвая</span>
           </blockquote>
           <div class="reviews__arrows">
-            <button class="reviews__arrow reviews__arrow--prev" type="button"></button>
-            <button class="reviews__arrow reviews__arrow--next" type="button"></button>
+            <button class="reviews__arrow reviews__arrow--prev" type="button" aria-label="Предыдущий отзыв"></button>
+            <button class="reviews__arrow reviews__arrow--next" type="button" aria-label="Следующий отзыв"></button>
           </div>
         </div>
 
         <div class="reviews__toggles slider">
-          <button class="slider__item slider__item--current" type="button" aria-label="Тариф База"></button>
-          <button class="slider__item" type="button" aria-label="Тариф Стандарт"></button>
-          <button class="slider__item" type="button" aria-label="Тариф Анлим"></button>
+          <button class="slider__item slider__item--current" type="button" aria-label="Первый отзыв"></button>
+          <button class="slider__item" type="button" aria-label="Второй отзыв"></button>
+          <button class="slider__item" type="button" aria-label="Третий отзыв"></button>
         </div>
       </div>
     </section>
@@ -269,9 +270,9 @@
         </table>
 
         <p class="price__toggles slider">
-          <button class="slider__item" type="button"></button>
-          <button class="slider__item slider__item--current" type="button"></button>
-          <button class="slider__item" type="button"></button>
+          <button class="slider__item" type="button" aria-label="Тариф База"></button>
+          <button class="slider__item slider__item--current" type="button" aria-label="Тариф Стандарт"></button>
+          <button class="slider__item" type="button" aria-label="Тариф Анлим"></button>
         </p>
       </div>
     </section>
@@ -308,7 +309,7 @@
   <div class="container">
     <footer class="page-footer">
       <a class="page-footer__logo">
-        <svg class="page-footer__logo-pink logo-footer" width="146.3px" height="40.375px" viewBox="0 0 146.3 40.375" role="img" aria-label="Логотип сайта Pink">
+        <svg class="page-footer__logo-pink logo-footer" width="146" height="40" viewBox="0 0 146 40" role="img" aria-label="Логотип сайта Pink">
           <style>
             .logo-footer__topstar,
             .logo-footer__stars,
