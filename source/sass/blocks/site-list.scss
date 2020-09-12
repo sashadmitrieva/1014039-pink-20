@@ -11,6 +11,7 @@
     width: 700px;
     margin-top: 30px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     text-transform: none;
 
@@ -28,13 +29,22 @@
     color: $base-white;
     padding-top: 16px;
 
-    @media (max-width: $tablet-width + 299px) {
+    &:hover {
+      color: $base-pink;
+    }
+
+    &:active {
+      color: $special-pink;
+    }
+
+    @media (min-width: $desktop-width) {
       &:hover {
         color: $base-pink;
       }
 
       &:active {
-        color: $special-pink;
+        color: $base-white;
+        opacity: 0.3;
       }
     }
   }
