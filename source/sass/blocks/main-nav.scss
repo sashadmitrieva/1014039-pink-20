@@ -1,0 +1,94 @@
+.main-nav__toggle {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  padding: 0;
+  width: 50px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    top: 40px;
+  }
+
+  &:hover span {
+    background-color: $base-pink;
+
+    &::before,
+    &::after {
+      background-color: $base-pink;
+    }
+  }
+
+  &:active span {
+    background-color: $special-pink;
+
+    &::before,
+    &::after {
+      background-color: $special-pink;
+    }
+  }
+
+  span {
+    position: relative;
+    display: block;
+    background-color: $base-white;
+    width: 50px;
+    height: 4px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 4px;
+      top: -10px;
+      left: 0;
+      background-color: $base-white;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 4px;
+      top: 10px;
+      left: 0;
+      background-color: $base-white;
+    }
+  }
+
+  &--active {
+    top: 17px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+
+    span {
+      background-color: transparent;
+      height: 0;
+      width: 0;
+
+      &::before {
+        top: 0;
+        width: 30px;
+        height: 3px;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        top: 0;
+        width: 30px;
+        height: 3px;
+        transform: rotate(-45deg);
+      }
+
+      &:hover,
+      &:active {
+        background-color: transparent;
+        height: 0;
+        width: 0;
+      }
+    }
+  }
+}
