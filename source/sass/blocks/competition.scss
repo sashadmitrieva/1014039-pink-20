@@ -1,25 +1,23 @@
-.competition {
-  &__promo {
-    margin: 0;
-    padding-top: 45px;
-    padding-left: 20px;
-    padding-right: 20px;
+.competition__promo {
+  margin: 0;
+  padding-top: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
 
-    @include base-size(14px, 400, 30px);
-    text-align: center;
+  @include base-size(14px, 400, 30px);
+  text-align: center;
 
-    @media (min-width: $tablet-width) {
-      font-size: 18px;
-      padding-left: 60px;
-      padding-right: 60px;
-      padding-top: 90px;
-      padding-bottom: 70px;
-    }
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 90px;
+    padding-bottom: 70px;
+  }
 
-    @media (min-width: $desktop-width) {
-      padding-right: 70px;
-      padding-left: 70px;
-    }
+  @media (min-width: $desktop-width) {
+    padding-right: 70px;
+    padding-left: 70px;
   }
 }
 // Стилизация легенд
@@ -31,6 +29,7 @@
   text-align: center;
   padding-top: 40px;
   padding-bottom: 5px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
@@ -284,12 +283,11 @@
 .competition__input-field {
   border: 2px solid $base-border;
   border-radius: 3px;
-  padding-top: 25px;
-  padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
   flex-grow: 1;
   width: 100%;
+  min-height: 65px;
 
   &:hover {
     border-color: $base-blue;
@@ -331,7 +329,7 @@ input[type~="email"] {
 .competition__input-field::placeholder,
 .competition__input-phone::placeholder,
 .competition__input-email::placeholder {
-  @include base-size(18px, 400, 30px);
+  @include base-size(18px, 400, 60px);
   color: $base-blue;
   font-family: "Open Sans", "Arial", sans-serif;
 }
@@ -405,6 +403,10 @@ input[type~="email"] {
     width: 22px;
     height: 16px;
     background-image: url("data:image/svg+xml,%3Csvg version='1.0' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='21.698px' height='16.09px' viewBox='-82.357 4.875 21.698 16.09' enable-background='new -82.357 4.875 21.698 16.09' xml:space='preserve'%3E%3Cpath fill='%23d22856' d='M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z'/%3E%3C/svg%3E%0A");
+  }
+
+  &:focus + label::before {
+    box-shadow: 0 0 5px 1px $base-blue;
   }
 }
 
@@ -484,6 +486,10 @@ input[type~="email"] {
       top: 8px;
       left: -49px;
     }
+  }
+
+  &:focus + label::before {
+    box-shadow: 0 0 5px 1px $base-blue;
   }
 }
 

@@ -2,12 +2,6 @@
   color: $base-white;
   background-color: $base-blue;
 
-  &__top-cover {
-    @media (min-width: $desktop-width) {
-      background-color: $base-cover;
-    }
-  }
-
   @media (min-width: $desktop-width) {
     min-height: 394px;
     background-image: url("../img/bg-back-desktop@1x.jpg");
@@ -29,9 +23,17 @@
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/iphone-hand-desktop@2x.png"), url("../img/bg-back-desktop@2x.jpg");
-        background-size: contain, cover;
+        background-size: 1050px auto, cover;
       }
     }
+  }
+}
+
+.page-header__top-cover {
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    background-color: $base-cover;
   }
 }
 
@@ -66,28 +68,13 @@
   height: 69px;
   padding-top: 24px;
 
-  &:hover .page-header__logo-mobile > path {
+  &:hover path {
     fill: $base-pink;
   }
 
-  &:active .page-header__logo-mobile > path {
+  &:active path {
     fill: $base-white;
     opacity: 0.3;
-  }
-
-  &:hover .logo__letters > path,
-  &:hover .logo__glasses--tablet,
-  &:hover .logo__glasses--desktop > path {
-    fill: $base-pink;
-  }
-
-  &:active .page-header__logo-pink {
-    opacity: 0.3;
-
-    .logo__letters > path,
-    .logo__glasses > path {
-      fill: $base-white;
-    }
   }
 
   @media (min-width: $tablet-width) {
@@ -157,12 +144,12 @@
   background-position: center;
   min-height: 171px;
 
-  &--mobile {
-    background-image: none;
-  }
-
   @media (min-resolution: 2dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+
+  &--mobile {
+    background-image: none;
   }
 
   @media (min-width: $tablet-width) {
@@ -194,7 +181,7 @@
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/iphone-hand-tablet@2x.png"), url("../img/bg-back-tablet@2x.jpg");
-        background-size: contain, cover;
+        background-size: 106%, cover;
       }
     }
 

@@ -54,7 +54,7 @@ exports.sprite = sprite;
 
 const html = () => {
   return gulp.src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true}))
+    .pipe(htmlmin({ collapseWhitespace: false}))
     .pipe(gulp.dest("build"))
     .pipe(sync.stream());
 }
@@ -82,6 +82,7 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))

@@ -76,6 +76,15 @@
     border-radius: 50%;
   }
 
+  &::-moz-range-thumb {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background-color: $base-white;
+    border: 2px solid $base-pink;
+    border-radius: 50%;
+  }
+
   &:active::-webkit-slider-thumb {
     background-color: $base-pink;
   }
